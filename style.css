@@ -3,16 +3,44 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* navbar */
 
 .navbar{
-    background-color: #555;
-    width: 100%;
-    overflow: auto;
+    padding: 12px;
+    display: flex;
+    background-color:  #555;
 }
 
-.navbar a{
+.logos {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.page {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.page a{
     padding: 12px;
+    color: white;
+}
+
+.signin {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.signin a{
+    padding: 12px;
+    color: white;
 }
 
 /* navbar */
