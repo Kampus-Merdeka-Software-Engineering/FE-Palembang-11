@@ -48,48 +48,47 @@ a {
 
 
 /* Banner */
-isi kode disini
+
 /* Banner */
 
 
 
 /* Fitur keunggulan */
-isi kode disini
+
 /* Fitur keunggulan */
 
 
 
 /* Deskripsi */
-isi kode disini
+
 /* Deskripsi */
 
 
 
 /* Video */
-isi kode disini
+
 /* Video */
 
 
 
 /* Tutorial */
-isi kode disini
+
 /* Tutorial */
 
 
 
 /* Question */
-isi kode disini
+
 /* Question */
 
 
 
 /* Artikel */
-isi kode disini
+
 /* Artikel */
 
 
 /* Testimoni */
-/* Float four columns side by side */
 .column {
     float: left;
     width: 25%;
@@ -97,12 +96,10 @@ isi kode disini
   }
   
   /* Remove extra left and right margins, due to padding */
-  .Testimoni {
-    margin: 0 -5px;
-}
+  .row {margin: 0 -5px;}
   
   /* Clear floats after the columns */
-  .Testimoni:after {
+  .row:after {
     content: "";
     display: table;
     clear: both;
@@ -124,9 +121,9 @@ isi kode disini
     text-align: center;
     background-color: #f1f1f1;
   }
-  /* Testimoni */
+/* Testimoni */
 
 
 /* About */
-isi kode disini
+
 /* About */
