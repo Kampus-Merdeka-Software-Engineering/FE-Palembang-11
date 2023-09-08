@@ -142,6 +142,22 @@ a {
   .button:hover {
     background-color: #555;
   }
+
+  .button-more {
+    border-radius: 12px;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+  }
+
+  .button-more:hover {
+    background-color: #555;
+  }
 /* Artikel */
 
 
