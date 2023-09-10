@@ -66,35 +66,62 @@ a {
 
 
 /* Video */
-.column {
+.video {
+  background-color: white;
+  margin: 10px;
+}
+
+.line {
+  background-color: white;
+  width: 100%;
+  margin: 0 50px;
+  text-align: center;
+}
+
+.pillar {
+  background-color: white;
+  width: 30%;
   float: left;
-  width: 25%;
-  padding: 0 8px;
-  }
+  padding: 10px;
+}
 
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: white;
-    color: black;
+@media screen and (max-width: 600px) {
+  .pillar {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
+}
 
-  .button-more {
-    border-radius: 12px;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100px;
-  }
+.playlist {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
 
-  .button-more:hover {
-    background-color: #555;
-  }
+.link {
+  background-color: white;
+}
+
+.button-more {
+  border-radius: 12px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 0 0 80px;
+}
+
+.button-more:hover {
+  background-color: #555;
+}
 /* Video */
 
 
@@ -112,7 +139,83 @@ a {
 
 
 /* Artikel */
+.Artikel {
+  background-color: white;
+}
+ .column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
 
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  color: #000;
+}
+
+.kategori {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  text-align: left;
+  color: grey;
+}
+
+.button {
+  border-radius: 12px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  float: right ;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.button-more {
+  border-radius: 12px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+}
+
+.button-more:hover {
+  background-color: #555;
+}
 /* Artikel */
 
 
