@@ -100,17 +100,22 @@ a.active,a:hover{
 
 
 /* Banner */
-.banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.Banner{
   background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.text {
-  display: block;
+.banner {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.banner .text {
+  display: flex;
+  align-items: center;
   padding: 20px;
 }
 
@@ -125,13 +130,12 @@ a.active,a:hover{
 
 .image {
   display: block;
-  padding: 20px;
 }
 
 @media (max-width: 870px) {
-  .banner {
-      flex-direction: row-reverse;
-      grid-template-columns: 1fr; 
+  .banner{
+    display: block;
+    padding: 0;
   }
 }
 /* Banner */
@@ -140,7 +144,7 @@ a.active,a:hover{
 
 /* Fitur keunggulan */
 .keunggulan{
-  margin: 50px 50px 50px 50px;
+  margin: 50px 70px 100px 70px;
 }
 
 .keunggulan h1{
@@ -175,6 +179,7 @@ a.active,a:hover{
 
 /* Deskripsi */
 .deskripsi{
+  margin: 100px 0 100px 0;
   display: flex;
   justify-content: center;
 }
@@ -206,7 +211,7 @@ a.active,a:hover{
 @media screen and (max-width: 870px) {
   .deskripsi .container {
     display: block;
-    padding: 0;
+    padding: 30px;
   }
   .deskripsi .container .left{
     text-align: center;
@@ -237,7 +242,65 @@ a.active,a:hover{
 
 
 /* Question */
+.Question{
+  margin: 100px 0 100px 0;
+}
+.question-section {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px; 
+  margin: 50px auto 50px auto; 
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
+.question-box {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#question-heading {
+  margin: 10px;
+}
+
+.question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.answer-notification {
+  font-style: italic;
+}
+
+.answer {
+  display: none;
+  margin-top: 5px;
+}
+
+.more-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .Question{
+    padding: 30px;
+  }
+
+  .question-box {
+      padding: 5px; 
+  }
+}
 /* Question */
 
 
@@ -248,6 +311,10 @@ a.active,a:hover{
 
 
 /* Testimoni */
+.testimoni{
+  margin: 100px 0 100px 0;
+}
+
 .testimoni h2{
   text-align: center;
   font-style: italic;
@@ -298,5 +365,106 @@ a.active,a:hover{
 
 
 /* About */
+.aboutus{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ddd;
+}
 
+.aboutus-container{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.as-content{
+  float: left;
+  width:55%;
+}
+.image-section{
+  float: right;
+  width:40%;
+}
+.image-section img{
+  width: 100%;
+  height: auto;
+}
+.as-content .heading{
+ text-transform: uppercase; 
+ font-size: 28px;
+}
+.as-content .content h3{
+  margin-top: 20px;
+  color: #5d5d5d;
+  font-size: 21px;
+}
+.as-content .content p{
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.as-content .content .button{
+ margin-top: 30px; 
+}
+.as-content .content .button a{
+  background-color: #3d3d3d;
+  padding: 12px 40px;
+  text-decoration: none;
+  color:#fff;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+.as-content .content .button a:hover{
+  background-color: #a52a52;
+  color: #fff;
+}
+.as-content .social{
+  margin:40px 40px;
+}
+.as-content .content .social i{
+  font-size: 50px;
+  padding:0px 10px;
+}
+.as-content .content .social i:hover{
+  color:#a52a52;
+}
+@media screen and (max-width: 768px){
+  .aboutus-container{
+      width: 80%;
+      display: block;
+      margin: auto;
+      padding-top: 50px;
+  }
+  .as-content{
+      float: none;
+      width:100%;
+      display: block;
+      margin: auto;
+  }
+  .image-section{
+      float: none;
+      width:100%;
+  }
+  .image-section img{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+  }
+  .as-content .heading{
+      text-align: center; 
+      font-size: 19px;
+   }
+   .as-content .content .button{
+      text-align: center;
+   }
+   .as-content .content .button a{
+      padding: 9px 30px;
+  }
+  .as-content .social{
+      text-align: center;
+  }
+}
 /* About */
