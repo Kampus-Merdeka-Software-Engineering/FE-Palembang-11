@@ -100,7 +100,40 @@ a.active,a:hover{
 
 
 /* Banner */
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
 
+.text {
+  display: block;
+  padding: 20px;
+}
+
+.explore-button {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  padding: 20px;
+}
+
+@media (max-width: 870px) {
+  .banner {
+      flex-direction: row-reverse;
+      grid-template-columns: 1fr; 
+  }
+}
 /* Banner */
 
 
@@ -141,7 +174,52 @@ a.active,a:hover{
 
 
 /* Deskripsi */
+.deskripsi{
+  display: flex;
+  justify-content: center;
+}
 
+.deskripsi .container{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.deskripsi .container .left{
+  text-align: right;
+  width: 50%;
+}
+.deskripsi .container .right{
+  display: flex;
+  width: 50%;
+}
+
+.deskripsi .container .right .desc{
+  display: flex;
+  align-items: center;
+}
+
+.deskripsi .container .right .desc .text{
+  width: 50%;
+}
+
+@media screen and (max-width: 870px) {
+  .deskripsi .container {
+    display: block;
+    padding: 0;
+  }
+  .deskripsi .container .left{
+    text-align: center;
+    width: 100%;
+  }
+  .deskripsi .container .right{
+    width: 100%;
+  }
+  .deskripsi .container .right .desc .text{
+    text-align: center;
+    width: 100%;
+  }
+}
 /* Deskripsi */
 
 
