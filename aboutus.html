@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
+    <title>About Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Poppins:wght@200;300;400&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .aboutus{
+            width: 100%;
+            min-height: 100vh;
+            background-color: #ddd;
+        }
+
+        .aboutus-container{
+            width: 80%;
+            display: block;
+            margin: auto;
+            padding-top: 100px;
+        }
+
+        .as-content{
+            float: left;
+            width:55%;
+        }
+        .image-section{
+            float: right;
+            width:40%;
+        }
+        .image-section img{
+            width: 100%;
+            height: auto;
+        }
+        .as-content .heading{
+           text-transform: uppercase; 
+           font-size: 28px;
+        }
+        .as-content .content h3{
+            margin-top: 20px;
+            color: #5d5d5d;
+            font-size: 21px;
+        }
+        .as-content .content p{
+            margin-top: 10px;
+            font-family: sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .as-content .content .button{
+           margin-top: 30px; 
+        }
+        .as-content .content .button a{
+            background-color: #3d3d3d;
+            padding: 12px 40px;
+            text-decoration: none;
+            color:#fff;
+            font-size: 25px;
+            letter-spacing: 1.5px;
+        }
+        .as-content .content .button a:hover{
+            background-color: #a52a52;
+            color: #fff;
+        }
+        .as-content .social{
+            margin:40px 40px;
+        }
+        .as-content .content .social i{
+            font-size: 50px;
+            padding:0px 10px;
+        }
+        .as-content .content .social i:hover{
+            color:#a52a52;
+        }
+        @media screen and (max-width: 768px){
+            .aboutus-container{
+                width: 80%;
+                display: block;
+                margin: auto;
+                padding-top: 50px;
+            }
+            .as-content{
+                float: none;
+                width:100%;
+                display: block;
+                margin: auto;
+            }
+            .image-section{
+                float: none;
+                width:100%;
+            }
+            .image-section img{
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+            .as-content .heading{
+                text-align: center; 
+                font-size: 19px;
+             }
+             .as-content .content .button{
+                text-align: center;
+             }
+             .as-content .content .button a{
+                padding: 9px 30px;
+            }
+            .as-content .social{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aboutus">
+        <div class="aboutus-container">
+            <div class="as-content">
+                <div class="heading">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit alias et debitis dolorum, corporis libero.</p>
+                    <div class="button">
+                        <a href="team.html">Read More</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href=""><i class="fa-regular fa-envelope"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="./img/img.jpg" alt="gambar-as">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
