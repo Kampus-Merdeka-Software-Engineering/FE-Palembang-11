@@ -14,10 +14,10 @@ a {
 /* navbar */
 
 nav{
-  background: #0082e6;
+  background: #4F709C;
   width: 100%;
   padding: 14px;
-  position: sticky;
+  position: fixed;
   display: flex;
 }
 label.logo{
@@ -101,16 +101,17 @@ a.active,a:hover{
 
 /* Banner */
 .Banner{
-  background-color: #3498db;
+  background-color: #F0F0F0;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .banner {
   width: 70%;
   display: flex;
   justify-content: center;
-  color: #fff;
+  color: #213555;
 }
 
 .banner .text {
@@ -120,12 +121,17 @@ a.active,a:hover{
 }
 
 .explore-button {
-  background-color: #ff5733;
-  color: #fff;
+  background-color: #E5D283;
+  color: #213555;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
   cursor: pointer;
+}
+
+.explore-button:hover {
+  background-color: #4F709C;
+  color: #E5D283;
 }
 
 .image {
@@ -136,6 +142,7 @@ a.active,a:hover{
   .banner{
     display: block;
     padding: 0;
+    margin-top: 50px;
   }
 }
 /* Banner */
@@ -144,7 +151,7 @@ a.active,a:hover{
 
 /* Fitur keunggulan */
 .keunggulan{
-  margin: 50px 70px 100px 70px;
+  margin: 100px 70px 100px 70px;
 }
 
 .keunggulan h1{
@@ -230,6 +237,30 @@ a.active,a:hover{
 
 
 /* Video */
+.Video{
+  display: flex;
+  justify-content: center;
+}
+
+.video{
+  border: 1px solid black;
+  width: 70%;
+  padding: 20px;
+}
+
+.playlist-section{
+  display: flex;
+}
+
+.playlist{
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 870px) {
+  .playlist-section{
+    display: block;
+  }
+}
 
 /* Video */
 

@@ -1,3 +1,5 @@
+
+// more button
 function showMoreQuestions() {
     const hiddenQuestions = document.querySelectorAll('.question-box.hidden');
 
