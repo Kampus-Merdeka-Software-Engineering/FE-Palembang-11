@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .text {
+            display: block;
+            padding: 20px;
+        }
+
+        .explore-button {
+            background-color: #ff5733;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .image {
+            display: block;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="text">
+            <h1>Selamat Datang di Website Kami</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac justo eget libero egestas posuere.</p>
+            <button class="explore-button">Explore</button>
+        </div>
+        <div class="image">
+            <img src="gambar.jpg" alt="Gambar Banner" width="300">
+        </div>
+    </div>
+</body>
+</html>
