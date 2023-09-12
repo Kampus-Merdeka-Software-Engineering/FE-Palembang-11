@@ -118,6 +118,7 @@ a.active,a:hover{
   display: flex;
   align-items: center;
   padding: 20px;
+  width: 50%;
 }
 
 .explore-button {
@@ -138,11 +139,16 @@ a.active,a:hover{
   display: block;
 }
 
-@media (max-width: 870px) {
+@media (max-width: 1000px) {
   .banner{
     display: block;
     padding: 0;
     margin-top: 50px;
+  }
+
+
+  .Banner .text{
+    width: 100%;
   }
 }
 /* Banner */
@@ -200,10 +206,13 @@ a.active,a:hover{
 .deskripsi .container .left{
   text-align: right;
   width: 50%;
+  padding: 10px;
 }
 .deskripsi .container .right{
   display: flex;
   width: 50%;
+  padding: 10px;
+
 }
 
 .deskripsi .container .right .desc{
@@ -213,6 +222,11 @@ a.active,a:hover{
 
 .deskripsi .container .right .desc .text{
   width: 50%;
+}
+
+.text p{
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 @media screen and (max-width: 870px) {
@@ -238,14 +252,17 @@ a.active,a:hover{
 
 /* Video */
 .Video{
+  margin: 100px 0 100px 0;
   display: flex;
   justify-content: center;
 }
 
 .video{
+  border-radius: 10px;
   border: 1px solid black;
-  width: 70%;
+  background-color: #D1DAE6;
   padding: 20px;
+  width: 75%;
 }
 
 .playlist-section{
@@ -254,6 +271,10 @@ a.active,a:hover{
 
 .playlist{
   margin: 0 10px;
+}
+
+.video .text{
+  color: #213555;
 }
 
 @media screen and (max-width: 870px) {
@@ -267,6 +288,37 @@ a.active,a:hover{
 
 
 /* Tutorial */
+.Tutorial{
+  margin: 100px 0 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tutorial{
+  width: 75%;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #D1DAE6;
+  padding: 20px;
+}
+
+.tutorial-section{
+  display: flex;
+}
+
+.tutor{
+  margin: 0 10px;
+}
+
+.tutorial .text{
+  color: #213555;
+}
+
+@media screen and (max-width: 870px) {
+  .tutorial-section{
+    display: block;
+  }
+}
 
 /* Tutorial */
 
