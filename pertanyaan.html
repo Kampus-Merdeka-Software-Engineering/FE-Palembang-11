@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        nav{
+            background: #4F709C;
+            width: 100%;
+            padding: 14px;
+            position: fixed;
+            display: flex;
+          }
+          label.logo{
+            color: white;
+            font-size: 35px;
+            padding: 0 100px;
+            font-weight: bold;
+          }
+          nav ul{
+            float: right;
+            margin-right: 20px;
+          }
+          nav ul li{
+            display: inline-block;
+            margin: 0 5px;
+          }
+          nav ul li a{
+            color: white;
+            font-size: 15px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+          }
+          a.active,a:hover{
+            background: #1b9bff;
+            transition: .5s;
+          }
+          .checkbtn{
+            font-size: 30px;
+            color: white;
+            float: right;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+          }
+          #check{
+            display: none;
+          }
+          @media (max-width: 952px){
+            label.logo{
+              font-size: 30px;
+              padding-left: 10px;
+            }
+            nav ul li a{
+              font-size: 16px;
+            }
+          }
+          @media (max-width: 1010px){
+            .checkbtn{
+              display: block;
+            }
+            ul{
+              position: fixed;
+              width: 50%;
+              height: 100vh;
+              background: #2c3e50;
+              left: -100%;
+              text-align: center;
+              transition: all .5s;
+              margin-top: 47px;
+            }
+            nav ul li{
+              display: block;
+              margin: 50px 0 0 -40px;
+              line-height: 30px;
+            }
+            nav ul li a{
+              font-size: 20px;
+            }
+            a:hover,a.active{
+              background: none;
+              color: #0082e6;
+            }
+            #check:checked ~ ul{
+              left: 0;
+            }
+          }
+          .Question{
+            margin: 100px 0 100px 0;
+          }
+          .question-section {
+            border-radius: 20px;
+            width: 100%;
+            max-width: 800px; 
+            margin: 50px auto 50px auto; 
+            padding: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          }
+          
+          .question-box {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+          
+          #question-heading {
+            margin: 10px;
+          }
+          
+          .question {
+            font-weight: bold;
+            cursor: pointer;
+          }
+          
+          .answer-notification {
+            font-style: italic;
+          }
+          
+          .answer {
+            display: none;
+            margin-top: 5px;
+          }
+          
+          .more-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+          
+          .hidden {
+            display: none;
+          }
+          
+          @media (max-width: 480px) {
+            .Question{
+              padding: 30px;
+            }
+          
+            .question-box {
+                padding: 5px; 
+            }
+          }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Spuhin.id</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Course</a></li>
+          <li><a href="#">Tutorial</a></li>
+          <li><a href="#">QnA</a></li>
+          <li><a href="#">Artikel</a></li>
+        </ul>
+    </nav>
+
+    <div class="Question">
+        <div class="question-section" id="questionSection">
+            <h1 id="question-heading">Question and Answer Section</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor quis magna in posuere. Donec iaculis erat nec nibh fringilla, at feugiat erat lacinia. Nullam feugiat, est efficitur blandit imperdiet, mi lectus consequat tortor, ut viverra tellus eros euismod mi.</p>
+            <!-- Kotak pertanyaan 1 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(1)">Pertanyaan 1:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer1">Jawaban 1</div>
+            </div>
+    
+            <!-- Kotak pertanyaan 2 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(2)">Pertanyaan 2:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer2">Jawaban 2</div>
+            </div>
+    
+            <!-- Kotak pertanyaan 3 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(3)">Pertanyaan 3:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer3">Jawaban 3</div>
+            </div>
+    
+            <!-- Kotak pertanyaan 4 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(4)">Pertanyaan 4:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer4">Jawaban 4</div>
+            </div>
+    
+            <!-- Kotak pertanyaan 5 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(5)">Pertanyaan 5:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer5">Jawaban 5</div>
+            </div>
+    
+            <!-- Kotak pertanyaan 6 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(6)">Pertanyaan 6:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer6">Jawaban 6</div>
+            </div>
+    
+            <!-- Kotak pertanyaan 7 -->
+            <div class="question-box">
+                <div class="question" onclick="toggleAnswer(7)">Pertanyaan 7:</div>
+                <div class="answer-notification">1 Jawaban</div>
+                <div class="answer" id="answer7">Jawaban 7</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
