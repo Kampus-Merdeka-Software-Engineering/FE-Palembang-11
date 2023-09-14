@@ -1,4 +1,3 @@
-
 // more button
 function showMoreQuestions() {
     window.location.href = "pertanyaan.html";
