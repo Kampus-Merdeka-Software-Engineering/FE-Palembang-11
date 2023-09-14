@@ -1,10 +1,26 @@
+/* fots */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
 *{
   box-sizing: border-box;
 }
 
+h1,h2,h3,h4{
+  color: #213555;
+}
+
+p{
+  color: #6B6B6B;
+}
+
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -14,13 +30,14 @@ a {
 /* navbar */
 
 nav{
-  background: #4F709C;
+  background: #213555;
   width: 100%;
   padding: 14px;
   position: fixed;
   display: flex;
 }
 label.logo{
+  font-family: 'Quicksand', sans-serif;
   color: white;
   font-size: 35px;
   padding: 0 100px;
@@ -42,7 +59,7 @@ nav ul li a{
   text-transform: uppercase;
 }
 a.active,a:hover{
-  background: #1b9bff;
+  background: #E5D283;
   transition: .5s;
 }
 .checkbtn{
@@ -127,6 +144,7 @@ a.active,a:hover{
   font-size: 18px;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .explore-button:hover {
@@ -159,7 +177,7 @@ a.active,a:hover{
   background-color: #E5D283;
   margin: 0;
   padding: 50px;
-  border-radius: 0 0 50% 50%;
+  border-radius: 0 0 30% 30%;
 }
 
 
@@ -268,7 +286,7 @@ a.active,a:hover{
 
 .video{
   border-radius: 10px;
-  border: 1px solid black;
+  border: 3px solid #213555;
   background-color: #D1DAE6;
   padding: 20px;
   width: 70%;
@@ -280,6 +298,16 @@ a.active,a:hover{
 
 .playlist{
   margin: 0 10px;
+}
+
+.playlist-box iframe{
+  border: 2px solid #213555;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.playlist-box iframe:hover{
+  border: 5px solid #E5D283;
 }
 
 .video .text{
@@ -294,6 +322,7 @@ a.active,a:hover{
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: 0.3s;
 }
 
 .more-button:hover {
@@ -321,7 +350,7 @@ a.active,a:hover{
 .tutorial{
   width: 70%;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 3px solid #213555;
   background-color: #D1DAE6;
   padding: 20px;
 }
@@ -342,8 +371,13 @@ a.active,a:hover{
 }
 
 .tutor-box img{
-  border: 5px solid black;
+  border: 2px solid #213555;
   border-radius: 10px;
+  transition: 0.2s;
+}
+
+.tutor-box img:hover{
+  border: 5px solid #E5D283;
 }
 
 .tutorial .text{
@@ -368,20 +402,29 @@ a.active,a:hover{
 .Question{
   margin: 100px 0 100px 0;
 }
+
 .question-section {
   border-radius: 20px;
   width: 100%;
-  max-width: 800px; 
+  max-width: 1000px; 
   margin: 50px auto 50px auto; 
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #D1DAE6;
 }
 
 .question-box {
   border-radius: 10px;
-  border: 1px solid #ddd;
+  border: 3px solid #213555;
   padding: 10px;
   margin-bottom: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.question-box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 #question-heading {
@@ -390,7 +433,6 @@ a.active,a:hover{
 
 .question {
   font-weight: bold;
-  cursor: pointer;
 }
 
 .answer-notification {
@@ -421,12 +463,66 @@ a.active,a:hover{
 
 /* Artikel */
 
+.Artikel-section{
+  display: flex;
+  justify-content: center;
+}
+
+.article{
+  display: flex;
+  width: 70%;
+}
+
+.card .container{
+  color: black;
+}
+
+.article .card {
+  border-radius: 10px;
+  border: 5px solid #E5D283;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  padding: 30px;
+  margin: 30px;
+}
+
+.article p{
+  font-size: 12px;
+}
+
+.article .card img{
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #213555;
+}
+
+.article .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 1130px) {
+  .article{
+    display: block;
+  }
+
+  .article .card img{
+    width: 100%;
+    height: auto;
+  }
+
+  .article .card{
+    width: 80%;
+  }
+}
+
 /* Artikel */
 
 
 /* Testimoni */
 .testimoni{
-  margin: 100px 0 100px 0;
+  margin-top: 100px;
 }
 
 .testimoni h2{
@@ -450,6 +546,8 @@ a.active,a:hover{
     margin: 0;
     padding: 20px;
     text-align: center;
+    background-color: #213555;
+    border-radius: 50% 0 50% 0;
 }
 
   /* Clear floats after the columns */
@@ -469,20 +567,27 @@ a.active,a:hover{
   
   /* Style the counter cards */
   .testimoni .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    background-color: white;
     border-radius: 10px;
+    border: 5px solid #E5D283;
+    background-color: white;
+  }
+
+
+  .testimoni img{
+    border: 3px solid #E5D283;
   }
 /* Testimoni */
 
 
 /* About */
 .aboutus{
+  margin-top: 100px;
   width: 100%;
   min-height: 100vh;
-  background-color: #ddd;
+  background-color: #E5D283;
 }
 
 .aboutus-container{
@@ -556,6 +661,7 @@ a.active,a:hover{
       width:100%;
       display: block;
       margin: auto;
+      text-align: center;
   }
   .image-section{
       float: none;
