@@ -5,178 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question Section</title>
     <style>
-        *{
-          box-sizing: border-box;
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
+      body{
+        display: flex;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .aside{
+        width: 20%;
+        background-color: #213555;
+      }
+
+      .section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .headAside{
+        margin: 20px;
+      }
+
+      .listQuestion{
+        margin: 20px;
+      }
+
+      .listQuestion ul li{
+        list-style: none;
+        margin: 20px 0 20px 0;
+      }
+
+      .listQuestion ul li a{
+        color: #E5D283;
+        text-decoration: none;
+      }
+
+      /* Question */
+      .Question{
+        margin: 100px 0 100px 0;
+      }
+
+      .question-section {
+        border-radius: 20px;
+        width: 100%;
+        max-width: 1000px; 
+        margin: 50px auto 50px auto; 
+        padding: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #D1DAE6;
+      }
+
+      .question-box {
+        border-radius: 10px;
+        border: 3px solid #213555;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .question-box:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      #question-heading {
+        margin: 10px;
+      }
+
+      .question {
+        font-weight: bold;
+      }
+
+      .answer-notification {
+        font-style: italic;
+      }
+
+      .answer {
+        display: none;
+        margin-top: 5px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      @media (max-width: 480px) {
+        .Question{
+          padding: 30px;
         }
 
-        body{
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+        .question-box {
+            padding: 5px; 
         }
-
-        a {
-            text-decoration: none;
-        }
-
-        nav{
-            background: #4F709C;
-            width: 100%;
-            padding: 14px;
-            position: fixed;
-            display: flex;
-          }
-          label.logo{
-            color: white;
-            font-size: 35px;
-            padding: 0 100px;
-            font-weight: bold;
-          }
-          nav ul{
-            float: right;
-            margin-right: 20px;
-          }
-          nav ul li{
-            display: inline-block;
-            margin: 0 5px;
-          }
-          nav ul li a{
-            color: white;
-            font-size: 15px;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
-          }
-          a.active,a:hover{
-            background: #1b9bff;
-            transition: .5s;
-          }
-          .checkbtn{
-            font-size: 30px;
-            color: white;
-            float: right;
-            margin-right: 40px;
-            cursor: pointer;
-            display: none;
-          }
-          #check{
-            display: none;
-          }
-          @media (max-width: 952px){
-            label.logo{
-              font-size: 30px;
-              padding-left: 10px;
-            }
-            nav ul li a{
-              font-size: 16px;
-            }
-          }
-          @media (max-width: 1010px){
-            .checkbtn{
-              display: block;
-            }
-            ul{
-              position: fixed;
-              width: 50%;
-              height: 100vh;
-              background: #2c3e50;
-              left: -100%;
-              text-align: center;
-              transition: all .5s;
-              margin-top: 47px;
-            }
-            nav ul li{
-              display: block;
-              margin: 50px 0 0 -40px;
-              line-height: 30px;
-            }
-            nav ul li a{
-              font-size: 20px;
-            }
-            a:hover,a.active{
-              background: none;
-              color: #0082e6;
-            }
-            #check:checked ~ ul{
-              left: 0;
-            }
-          }
-
-          .question-section {
-            border-radius: 20px;
-            width: 100%;
-            max-width: 800px;
-            top: 50px; 
-            margin: 0 auto 50px auto; 
-            padding: 30px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          }
-          
-          .question-box {
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-          }
-          
-          #question-heading {
-            margin: 10px;
-          }
-          
-          .question {
-            font-weight: bold;
-            cursor: pointer;
-          }
-          
-          .answer-notification {
-            font-style: italic;
-          }
-          
-          .answer {
-            display: none;
-            margin-top: 5px;
-          }
-          
-          .more-button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-          }
-          
-          .hidden {
-            display: none;
-          }
-          
-          @media (max-width: 480px) {
-            .Question{
-              padding: 30px;
-            }
-          
-            .question-box {
-                padding: 5px; 
-            }
-          }
+      }
+      /* Question */
     </style>
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">Spuhin.id</label>
+    <div class="aside">
+      <div class="headAside">
+        <a href="index.html"><img src="./img/icons/left-arrow.png" width="50px"></a>
+      </div>
+      <div class="listQuestion">
         <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Course</a></li>
-          <li><a href="#">Tutorial</a></li>
-          <li><a href="#">QnA</a></li>
-          <li><a href="#">Artikel</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Javascript</a></li>
         </ul>
-    </nav>
+      </div>
+    </div>
 
-    <div class="Question">
+    <div class="section">
+      <div class="Question">
         <div class="question-section" id="questionSection">
             <h1 id="question-heading">Question and Answer Section</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor quis magna in posuere. Donec iaculis erat nec nibh fringilla, at feugiat erat lacinia. Nullam feugiat, est efficitur blandit imperdiet, mi lectus consequat tortor, ut viverra tellus eros euismod mi.</p>
@@ -229,6 +172,7 @@
                 <div class="answer" id="answer7">Jawaban 7</div>
             </div>
         </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
