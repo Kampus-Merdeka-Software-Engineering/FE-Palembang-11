@@ -38,8 +38,16 @@
       }
 
       .listQuestion ul li a{
+        padding: 5px;
         color: #E5D283;
         text-decoration: none;
+        transition: 0.3s;
+        border-radius: 5px;
+      }
+
+      .listQuestion ul li a:hover{
+        color: #213555;
+        background-color: #E5D283;
       }
 
       /* Question */
@@ -50,7 +58,7 @@
       .question-section {
         border-radius: 20px;
         width: 100%;
-        max-width: 1000px; 
+        max-width: 800px; 
         margin: 50px auto 50px auto; 
         padding: 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -92,13 +100,36 @@
         display: none;
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: 1060px) {
+        body{
+          display: block;
+        }
+
+        .aside{
+          width: 100%;
+          display: flex;
+        }
+
+        .listQuestion ul li{
+          display: inline;
+        }
+
         .Question{
           padding: 30px;
         }
 
+        .question-section{
+        width: 80%;
+        }
+
         .question-box {
             padding: 5px; 
+        }
+      }
+
+      @media (max-width: 640px){
+        .question-section{
+          width: 80%;
         }
       }
       /* Question */
