@@ -689,18 +689,11 @@ a.active,a:hover{
   background-color: #213555;
   padding: 12px 40px;
   text-decoration: none;
-<<<<<<< Updated upstream
-  color:#fff;
-  font-size: 20px;
-  letter-spacing: 1.5px;
-  border-radius: 10px;
-=======
   color:#E5D283;
   font-size: 25px;
   letter-spacing: 1.5px;
   transition: 0.2;
   border-radius: 20px;
->>>>>>> Stashed changes
 }
 .as-content .content .button a:hover{
   background-color: #213555;
@@ -749,10 +742,12 @@ a.active,a:hover{
       text-align: center;
    }
    .as-content .content .button a{
-      padding: 9px 30px;
+    text-decoration: none;
+    padding: 9px 30px;
   }
   .as-content .social{
-      text-align: center;
+    text-align: center;
+    color: #213555 ;
   }
 }
 /* About */

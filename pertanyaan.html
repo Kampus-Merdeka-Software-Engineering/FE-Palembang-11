@@ -8,9 +8,13 @@
       @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
       body{
-        display: flex;
         margin: 0;
         font-family: 'Roboto', sans-serif;
+      }
+
+      main{
+        display: flex;
+        height: 1000px;
       }
 
       .aside{
@@ -65,7 +69,7 @@
         background-color: #D1DAE6;
       }
 
-      .question-box {
+      .answer-box,.question-box {
         border-radius: 10px;
         border: 3px solid #213555;
         padding: 10px;
@@ -75,7 +79,35 @@
         transition: 0.3s;
       }
 
-      .question-box:hover {
+      input[type="text"], textarea {
+            width: 95%;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+      }
+
+      textarea {
+            resize: vertical;
+      }
+
+      #button-submit {
+        background-color: #213555;
+        color: #E5D283;
+        padding: 10px 20px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      #button-submit:hover {
+        background-color: #E5D283;
+        color: #213555;
+      }
+
+      .answer-box:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       }
 
@@ -101,7 +133,7 @@
       }
 
       @media (max-width: 1060px) {
-        body{
+        main{
           display: block;
         }
 
@@ -112,6 +144,10 @@
 
         .listQuestion ul li{
           display: inline;
+        }
+
+        input[type="text"], textarea {
+          width: 92%;
         }
 
         .Question{
@@ -136,6 +172,7 @@
     </style>
 </head>
 <body>
+  <main>
     <div class="aside">
       <div class="headAside">
         <a href="index.html"><img src="./img/icons/left-arrow.png" width="50px"></a>
@@ -153,58 +190,30 @@
       <div class="Question">
         <div class="question-section" id="questionSection">
             <h1 id="question-heading">Question and Answer Section</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor quis magna in posuere. Donec iaculis erat nec nibh fringilla, at feugiat erat lacinia. Nullam feugiat, est efficitur blandit imperdiet, mi lectus consequat tortor, ut viverra tellus eros euismod mi.</p>
-            <!-- Kotak pertanyaan 1 -->
+            <!-- submit pertanyaan -->
             <div class="question-box">
+              <div class="form-quest">
+                <textarea id="pertanyaan" name="pertanyaan" placeholder="tanyakan apapun..." required></textarea>
+              </div>
+              <hr>
+            <button id="button-submit" type="submit">Kirim Pertanyaan</button>
+            </div>
+            <!-- Kotak pertanyaan 1 -->
+            <div class="answer-box">
                 <div class="question" onclick="toggleAnswer(1)">Pertanyaan 1:</div>
                 <div class="answer-notification">1 Jawaban</div>
                 <div class="answer" id="answer1">Jawaban 1</div>
+                <hr>
+                <div class="form-ans">
+                  <textarea id="jawaban" name="jawaban" placeholder="beri jawaban kamu..." required></textarea>
+                </div>
+                <button id="button-submit" type="submit">Kirim Jawaban</button>
             </div>
     
-            <!-- Kotak pertanyaan 2 -->
-            <div class="question-box">
-                <div class="question" onclick="toggleAnswer(2)">Pertanyaan 2:</div>
-                <div class="answer-notification">1 Jawaban</div>
-                <div class="answer" id="answer2">Jawaban 2</div>
-            </div>
-    
-            <!-- Kotak pertanyaan 3 -->
-            <div class="question-box">
-                <div class="question" onclick="toggleAnswer(3)">Pertanyaan 3:</div>
-                <div class="answer-notification">1 Jawaban</div>
-                <div class="answer" id="answer3">Jawaban 3</div>
-            </div>
-    
-            <!-- Kotak pertanyaan 4 -->
-            <div class="question-box">
-                <div class="question" onclick="toggleAnswer(4)">Pertanyaan 4:</div>
-                <div class="answer-notification">1 Jawaban</div>
-                <div class="answer" id="answer4">Jawaban 4</div>
-            </div>
-    
-            <!-- Kotak pertanyaan 5 -->
-            <div class="question-box">
-                <div class="question" onclick="toggleAnswer(5)">Pertanyaan 5:</div>
-                <div class="answer-notification">1 Jawaban</div>
-                <div class="answer" id="answer5">Jawaban 5</div>
-            </div>
-    
-            <!-- Kotak pertanyaan 6 -->
-            <div class="question-box">
-                <div class="question" onclick="toggleAnswer(6)">Pertanyaan 6:</div>
-                <div class="answer-notification">1 Jawaban</div>
-                <div class="answer" id="answer6">Jawaban 6</div>
-            </div>
-    
-            <!-- Kotak pertanyaan 7 -->
-            <div class="question-box">
-                <div class="question" onclick="toggleAnswer(7)">Pertanyaan 7:</div>
-                <div class="answer-notification">1 Jawaban</div>
-                <div class="answer" id="answer7">Jawaban 7</div>
-            </div>
         </div>
     </div>
     </div>
+  </main>
     <script src="script.js"></script>
 </body>
 </html>
