@@ -31,23 +31,29 @@
           
           .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
             margin: 8px;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
+            background-color: #213555
           }
-          
+
+          .card-text {
+            color: white;
+          }
+
+          .card-box img {
+            border-radius: 10px;
+            border: 2px solid #E5D283;
+            margin: 10px;
+          }
+
           .container {
-            padding: 0 16px;
+            margin: 0 16px;
           }
           
-          .container::after, .row::after {
-            content: "";
-            clear: both;
-            display: table;
-          }
-          
-          .title {
-            color: grey;
+          .roles {
+            color: #E5D283;
           }
           
           .button{
@@ -55,8 +61,8 @@
             outline: 0;
             display: inline-block;
             padding: 8px;
-            color: white;
-            background-color: #000;
+            color: #213555;
+            background-color: #E5D283;
             text-align: center;
             cursor: pointer;
             width: 50%;
@@ -64,7 +70,8 @@
           }
           
           .button:hover {
-            background-color: #555;
+            background-color: #D1DAE6;
+            color: #213555;
           }
           
           @media screen and (max-width: 650px) {
@@ -81,93 +88,88 @@
   </div>
     <h2 style="text-align:center">Our Team</h2>
   <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="./img/jovis.jpg" alt="jovis" style="width:50%">
-        <div class="container">
-          <h2>Jovis Jocunda</h2>
-          <p class="title">Lead</p>
-          <p>Cuma bisa console.log</p>
-          <p>jocjovis@gmail.com</p>
-          <a href="#"><button class="button">Contact</button></a>
+    <div class="card-text">
+      <div class="column">
+        <div class="card">
+          <div class="card-box">
+            <img src="img\jovis.jpg" alt="Jovis" style="width:50%">
+          </div>
+          <div class="container">
+            <h2>Jovis Jocunda</h2>
+            <p class="roles">Project Lead</p>
+            <p>"Cuma bisa console.log."</p>
+            <a href="mailto:jocjovis@gmail.com"><button class="button">Contact</button></a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-        <div class="container">
-          <h2>Mike Ross</h2>
-          <p class="title">Art Director</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>mike@example.com</p>
-          <p><button class="button">Contact</button></p>
+      <div class="column">
+        <div class="card">
+          <div class="card-box">
+            <img src="img\Shavina.jpg" alt="Shavina" style="width:50%">
+          </div>
+          <div class="container">
+            <h2>Nooriza Shavina Az-Zahra</h2>
+            <p class="roles">Front End</p>
+            <p>"Emang boleh selinjur ini?"</p>
+            <a href="mailto:noorizashavinaazzahra@gmail.com"><button class="button">Contact</button></a>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-        <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
+      
+      <div class="column">
+        <div class="card">
+          <div class="card-box">
+            <img src="img\Aliyah.jpeg" alt="Aliyah" style="width:50%">
+          </div>
+          <div class="container">
+            <h2>Nurul Kurunulbahriah Aliyah</h2>
+            <p class="roles">Quality Assurance</p>
+            <p>"Back End gelap banget."</p>
+            <a href="mailto:nalia1876@gmail.com"><button class="button">Contact</button></a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-        <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
+      <div class="column">
+        <div class="card">
+          <div class="card-box">
+            <img src="img\Samuel.JPG" alt="Samuel" style="width:50%">
+          </div>
+          <div class="container">
+            <h2>Samuel Raka Yustianto</h2>
+            <p class="roles">Back End</p>
+            <p>"Menyesal menjadi Back End."</p>
+            <a href="mailto: samuelrakayustiantl@gmail.com"><button class="button">Contact</button></a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-        <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
+      
+      <div class="column">
+        <div class="card">
+          <div class="card-box">
+            <img src="img\Tami.jpeg" alt="Tami" style="width:50%">
+          </div>
+          <div class="container">
+            <h2>Sari Putri Utami</h2>
+            <p class="roles">Front End</p>
+            <p>"Laptop ngelag banget."</p>
+            <a href="mailto:sari.putriutami00@gmail.com"><button class="button">Contact</button></a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-        <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-        <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
-          <p><button class="button">Contact</button></p>
+      <div class="column">
+        <div class="card">
+          <div class="card-box">
+            <img src="" alt="Irfan" style="width:50%">
+          </div>
+          <div class="container">
+            <h2>Irfan Pratuah</h2>
+            <p class="roles">Back End</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <a href="#"><button class="button">Contact</button></a>
+          </div>
         </div>
       </div>
     </div>

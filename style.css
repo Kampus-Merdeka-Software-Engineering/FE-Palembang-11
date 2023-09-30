@@ -199,6 +199,9 @@ a.active,a:hover{
   height: 100%;
 }
 
+.keunggulan .container .card:hover {
+  transform: scale(1.2);
+}
 
 .keunggulan .container > div {
   text-align: center;
@@ -581,6 +584,9 @@ a.active,a:hover{
     background-color: white;
   }
 
+  .testimoni .card:hover {
+    transform: scale(1.2);
+  }
 
   .testimoni img{
     border: 3px solid #E5D283;
