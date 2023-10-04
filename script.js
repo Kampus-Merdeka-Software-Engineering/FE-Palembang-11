@@ -3,6 +3,10 @@ function showMoreQuestions() {
     window.location.href = "pertanyaan.html";
 }
 
+function showMoreQuestions() {
+  window.location.href = "tutorial.html";
+}
+
 function toggleAnswer(questionNumber) {
     const answer = document.querySelector(`#answer${questionNumber}`);
     

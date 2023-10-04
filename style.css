@@ -199,9 +199,6 @@ a.active,a:hover{
   height: 100%;
 }
 
-.keunggulan .container .card:hover {
-  transform: scale(1.2);
-}
 
 .keunggulan .container > div {
   text-align: center;
@@ -584,10 +581,6 @@ a.active,a:hover{
     background-color: white;
   }
 
-  .testimoni .card:hover {
-    transform: scale(1.2);
-  }
-
   .testimoni img{
     border: 3px solid #E5D283;
   }
@@ -649,7 +642,7 @@ a.active,a:hover{
   margin-top: 100px;
   border-radius: 30% 0 0 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #E5D283;
 }
 
@@ -727,8 +720,8 @@ a.active,a:hover{
       float: none;
       width:100%;
       display: block;
-      margin: auto;
       text-align: center;
+      margin-top: 50px;
   }
   .image-section{
       float: none;
