@@ -1,9 +1,13 @@
 // more button
 function showMoreQuestions() {
-    window.location.href = "pertanyaan.html";
+  window.location.href = "pertanyaan.html";
 }
 
-function showMoreQuestions() {
+function showMoreCourse() {
+  window.location.href = "course.html";
+}
+
+function showMoreTutorial() {
   window.location.href = "tutorial.html";
 }
 

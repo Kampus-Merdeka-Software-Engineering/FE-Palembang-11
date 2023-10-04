@@ -700,7 +700,7 @@ a.active,a:hover{
   padding: 15px 45px;
 }
 .as-content .social{
-  margin:40px 40px;
+  margin:20px 70px;
 }
 .as-content .content .social i{
   font-size: 50px;
@@ -746,7 +746,7 @@ a.active,a:hover{
   }
   .as-content .social{
     text-align: center;
-    color: #213555 ;
+    color: #213555;
   }
 }
 /* About */
