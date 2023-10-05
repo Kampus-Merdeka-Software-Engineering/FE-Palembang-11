@@ -333,6 +333,9 @@ a.active,a:hover{
 }
 
 @media screen and (max-width: 1050px) {
+  .video{
+    width: 95%;
+  }
   .playlist-section{
     display: block;
   }
@@ -387,6 +390,10 @@ a.active,a:hover{
 }
 
 @media screen and (max-width: 1050px) {
+  .tutorial{
+    width: 95%;
+  }
+
   .tutorial-section{
     display: block;
   }
@@ -511,6 +518,7 @@ a.active,a:hover{
 @media screen and (max-width: 1130px) {
   .article{
     display: block;
+    width: 95%;
   }
 
   .article .card img{
@@ -700,7 +708,7 @@ a.active,a:hover{
   padding: 15px 45px;
 }
 .as-content .social{
-  margin:20px 70px;
+  margin:40px 40px;
 }
 .as-content .content .social i{
   font-size: 50px;
@@ -746,7 +754,18 @@ a.active,a:hover{
   }
   .as-content .social{
     text-align: center;
-    color: #213555;
+    color: #213555 ;
   }
 }
 /* About */
+
+.footer{
+  text-align: center;
+  background-color: #213555;
+  padding: 20px;
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+}
