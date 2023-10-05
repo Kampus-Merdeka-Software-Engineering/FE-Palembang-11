@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Section</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
+      
+      body{
+        display: flex;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #213555;
+      }
+
+
+      .aside{
+        width: 20%;
+        background-color: #213555;
+      }
+
+      .section{
+        width: 100%;
+      }
+
+      .headAside{
+        margin: 20px;
+      }
+
+      .listQuestion{
+        margin: 20px;
+      }
+
+      .listQuestion ul li{
+        list-style: none;
+        margin: 20px 0 20px 0;
+      }
+
+      .listQuestion ul li a{
+        padding: 5px;
+        color: #E5D283;
+        text-decoration: none;
+        transition: 0.3s;
+        border-radius: 5px;
+      }
+
+      .listQuestion ul li a:hover{
+        color: #213555;
+        background-color: #E5D283;
+      }
+
+      /* Question */
+      .Question{
+        margin: 100px 0 100px 0;
+      }
+
+      .question-section {
+        border-radius: 20px;
+        width: 100%;
+        max-width: 800px; 
+        margin: 50px auto 50px auto; 
+        padding: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #D1DAE6;
+      }
+
+      .question-box {
+        border-radius: 10px;
+        border: 3px solid #213555;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .question-box:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      #question-heading {
+        margin: 10px;
+      }
+
+      .question {
+        font-weight: bold;
+      }
+
+      .answer-notification {
+        font-style: italic;
+      }
+
+      .answer {
+        display: none;
+        margin-top: 5px;
+      }
+
+      .hidden {
+        display: block;
+      }
+
+      .jawaban-button {
+        background-color: #213555;
+        color: #E5D283;
+        padding: 10px 20px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .jawaban-button:hover {
+        background-color: #E5D283;
+        color: #213555;
+      }
+
+      #tambah-pertanyaan {
+        background-color: #213555;
+        color: #E5D283;
+        padding: 10px 20px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      
+      #tambah-pertanyaan:hover {
+        background-color: #E5D283;
+        color: #213555;
+      }
+
+      #form-pertanyaan,
+      #form-jawaban {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .centered-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      
+      #form-pertanyaan .question-box,
+      #form-jawaban .answer-box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        border: 3px solid #213555;
+        cursor: default;
+        transition: 0.3s;
+        width: 95%;
+        max-width: 500px;
+      }
+      
+      #form-pertanyaan textarea,
+      #form-jawaban textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        resize: vertical;
+        margin-bottom: 10px;
+      }
+      
+      #form-pertanyaan #button-submit,
+      #form-jawaban #submit-jawaban {
+        background-color: #213555;
+        color: #E5D283;
+        padding: 10px 20px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+        width: 100%;
+      }
+      
+      #form-pertanyaan #button-submit:hover,
+      #form-jawaban #submit-jawaban:hover {
+        background-color: #E5D283;
+        color: #213555;
+      }
+
+      label {
+        font-weight: bold; 
+        display: block; 
+        margin-bottom: 5px; 
+      }
+      
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc; 
+        outline: none;
+        resize: vertical;
+        margin-bottom: 10px;
+      }
+
+      .close-button {
+        margin: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        color: #213555;
+        transition: 0.3s;
+        text-align: center;
+      }
+      
+      .close-button:hover {
+        color: #E5D283;
+      }
+
+      @media (max-width: 1060px) {
+        body{
+          display: block;
+        }
+
+        .aside{
+          width: 100%;
+          display: flex;
+        }
+
+        .listQuestion ul li{
+          display: inline;
+        }
+
+        .Question{
+          padding: 30px;
+        }
+
+        .question-section{
+        width: 80%;
+        }
+
+        .question-box {
+            padding: 5px; 
+        }
+      }
+
+      @media (max-width: 640px){
+        .question-section{
+          width: 80%;
+        }
+      }
+      /* Question */
+    </style>
+</head>
+<body>
+
+    <div class="aside">
+      <div class="headAside">
+        <a href="..\index.html"><img src="../src/img/icons/left-arrow.png" width="50px"></a>
+      </div>
+      <div class="listQuestion">
+        <ul>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Javascript</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="Question">
+        <div class="question-section" id="questionSection">
+          <h1 id="question-heading">Question and Answer Section</h1>
+          <p>Ask what needs to be asked, don't ask what doesn't need to be asked ^-^</p>
+          <div id="questioner-container">
+            <!-- Kotak pertanyaan 1 -->
+          </div>
+          <button id="tambah-pertanyaan">Tambah Pertanyaan</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="form-pertanyaan" style="display: none;">
+      <div class="centered-content">
+        <form method="POST" action="/qna/add"> 
+          <div class="question-box">
+            <div class="form-quest">
+              <label for="nama">Nama Anda:</label><br>
+              <input id="name" type="text" name="name" placeholder="Nama Anda" required>
+              <br> 
+              <label for="pertanyaan">Pertanyaan Anda:</label><br>
+              <textarea id="pertanyaan" name="pertanyaan" placeholder="Tanyakan apapun..." required></textarea>
+            </div>
+            <hr>
+            <button id="button-submit" type="submit">Kirim Pertanyaan</button>
+            <div class="close-button" id="close-button">Batal</div>
+          </div>
+        </form> 
+      </div>
+    </div>
+
+    <div id="form-jawaban" style="display: none;">
+      <div class="centered-content">
+        <form id="jawaban-form" method="POST" action="/qna/jawaban">
+          <div class="answer-box">
+            <div class="form-quest">
+              <label for="jawaban-pertanyaan">Pertanyaan:</label><br>
+              <textarea id="jawaban-pertanyaan" name="pertanyaan" readonly></textarea>
+              <br>
+              <label for="jawaban">Jawaban Anda:</label><br>
+              <textarea id="jawaban" name="jawaban" placeholder="Jawaban Anda" required></textarea>
+              <input type="hidden" id="id_question" name="id_question" value="" >
+            </div>
+            <hr>
+            <button id="submit-jawaban" type="submit">Kirim Jawaban</button>
+            <div class="close-button" id="close-button">Batal</div>
+          </div>
+        </form>
+      </div>
+    </div>    
+    
+  <script src="../src/javascript/script.js"></script>
+</body>
+</html>

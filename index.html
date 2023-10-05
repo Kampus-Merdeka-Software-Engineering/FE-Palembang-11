@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spuhin</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/6ac5fc642c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Spuhin.id</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="./page/course.html">Course</a></li>
+        <li><a href="./page/tutorial.html">Tutorial</a></li>
+        <li><a href="./page/pertanyaan.html">QnA</a></li>
+        <li><a href="./page/team.html">AboutMe</a></li>
+      </ul>
+    </nav>
+    <!-- Nav -->
+
+    <!-- Banner -->
+    <div class="Banner">
+      <div class="banner">
+        <div class="text">
+          <div class="desc">
+            <h1>Join the Edutech Revolution!</h1>
+            <p>Spuhin.id enables students to learn anywhere, anytime, and at their own pace. Learning is more enjoyable with easily acessed materials in Spuhin.id.</p>
+            <a href="#video"><button class="explore-button">Explore</button></a>
+          </div>
+        </div>
+        <div class="image">
+            <img src="./src/img/Untitled-2.png" alt="Gambar Banner" width="100%">
+        </div>
+      </div>
+    </div>
+    <!-- Banner -->
+
+    <!-- Feature -->
+    <div class="keunggulan">
+      <div class="container">
+        <div>
+          <div class="card">
+            <img width="94" height="94" src="https://img.icons8.com/officel/80/classroom.png" alt="classroom"/>
+            <h3>Free Courses</h3>
+            <p>There are dozens of video courses that can be accessed for free</p>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <img width="94" height="94" src="https://img.icons8.com/color/96/courses.png" alt="courses"/>
+            <h3>Complete Tutorial</h3>
+            <p>There are dozens of tutorials from basic to expert</p>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <img width="94" height="94" src="https://img.icons8.com/color/96/people-working-together.png" alt="people-working-together"/>
+            <h3>Forum Responded</h3>
+            <p>QnA feature to discuss with experts and experts</p>
+          </div>
+        </div>  
+        <div>
+          <div class="card">
+            <img width="94" height="94" src="https://img.icons8.com/cute-clipart/128/apple-tips.png" alt="apple-tips"/>
+            <h3>Tips n Trick</h3>
+            <p>Various types and tricks can be found here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature -->
+
+    <!-- Desc -->
+    <div class="deskripsi" id="video">
+      <div class="container">
+        <div class="left">
+          <img src="./src/img/gif/Course app.gif" width="50%">
+        </div>
+        <div class="right">
+          <div class="desc">
+            <div class="text">
+              <h1>Upgrade your skill with Spuhin.id!</h1>
+              <p>With Spuhin.id, you're able to learn by watching courses from professional instructor, trying tutorials, ask questions, and read the newest article about software engineering.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Desc -->
+
+    <!-- Video -->
+    <div class="Video">
+      <div class="video">
+        <div class="text">
+          <h1>Course</h1>
+          <p>The video is taken from a professional instructor's YouTube channel.</p>
+          <!-- playlist -->
+          <div class="playlist-section">
+
+            <div class="playlist">
+              <div class="playlist-box">
+                <iframe width="100%" src="https://www.youtube.com/embed/NBZ9Ro6UKV8?si=0yVhA04-J_gQue-j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="text-judul">
+                <p>Hello World!</p>
+              </div>
+            </div>
+            
+            <div class="playlist">
+              <div class="playlist-box">
+                <iframe width="100%" src="https://www.youtube.com/embed/1NicaVOCXHA?si=-G266u4OMn6_TOqf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="text-judul">
+                <p>Code Editor</p>
+              </div>
+            </div>
+            <div class="playlist">
+              <div class="playlist-box">
+                <iframe width="100%" src="https://www.youtube.com/embed/3sLSi9L5nWE?si=adr-Gayuc5kZtu_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="text-judul">
+                <p>Tag</p>
+              </div>
+            </div>
+            <div class="playlist">
+              <div class="playlist-box">
+                <iframe width="100%" src="https://www.youtube.com/embed/cUWBYzA6M-8?si=TqKDBr7sYW8eNKif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="text-judul">
+                <p>Tag</p>
+              </div>
+            </div>
+          </div>
+          <button class="more-button" onclick="showMoreCourse()">Watch more</button>  
+        </div>
+      </div>
+    </div>
+    <!-- Video -->
+
+    <!-- Tutorial -->
+    <div class="Tutorial">
+      <div class="tutorial">
+        <div class="text">
+          <h1>Tutorial</h1>
+          <p>Tutorial based on the w3school curriculum</p>
+          <!-- playlist -->
+          <div class="tutorial-section">
+            <div class="tutor">
+              <a href="https://www.w3schools.com/howto/howto_css_login_form.asp" target="_blank">
+              <div class="tutor-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhdOMIyxmTIGWMBW6slzzAM9d3ktTj_hnilI0w96EBKESQPDgJacnatZH7HaGK4ihD2g8Ouuh415Cn5kPY1g8SUxVQE4boMxHruh1MQ_hMM4DLqq_IornFfqeoxibMuikzMEbe6yGJPxIIgAD2HSaabJ5AeptI7nmFCcxrovzUyFy6F1WHMN0Ln9nNTtQ=s804" height="178.3px" width="100%" alt="formlogin">
+              </div>
+              <div class="text-judul">
+                <p>Form Login</p>
+              </div>
+            </a>
+            </div>
+            <div class="tutor">
+              <a href="https://www.w3schools.com/howto/howto_css_table_zebra.asp" target="_blank">
+              <div class="tutor-box">
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Zhu5E2Bm--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/02lxssgxrwv7ywp2lhix.jpg" height="178.3px" width="100%" alt="table">
+              </div>
+              <div class="text-judul">
+                <p>Table Zebra</p>
+              </div>
+            </a>
+            </div>
+            <div class="tutor">
+              <a href="https://www.w3schools.com/howto/howto_css_alert_buttons.asp" target="_blank">
+              <div class="tutor-box">
+                <img src="https://nikitahl.com/images/button-styles/buttons-chrome.png" height="178.3px" width="100%" alt="button">
+              </div>
+              <div class="text-judul">
+                <p>Button</p>
+              </div>
+            </a>
+            </div>
+              <div class="tutor">
+                <a href="https://www.w3schools.com/howto/howto_css_navbar_icon.asp" target="_blank">
+              <div class="tutor-box">
+                <img src="https://i.ytimg.com/vi/PwWHL3RyQgk/maxresdefault.jpg" height="178.3px" width="100%" alt="navbar">
+              </div>
+              <div class="text-judul">
+                <p>Navbar</p>
+              </div>
+            </a>
+            </div>
+          </div>
+          <button class="more-button" onclick="showMoreTutorial()">More</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tutorial -->
+
+    <!-- Question -->
+    <div class="Question">
+      <div class="question-section" id="questionSection">
+        <h1 id="question-heading">SpuhOverflow</h1>
+          <!-- Kotak pertanyaan 1 -->
+        <div class="question-box" onclick="toggleAnswer(1)">
+          <div class="question">Kak boleh spill gaji software engineer untuk fresh graduate brp ngga?</div>
+          <div class="answer-notification">1 Answer <span><img src="./src/img/bookmark.png" width="10px"></span></div>
+          <div class="answer" id="answer1">Denger-denger 8 juta cmiiw :v</div>
+        </div>
+      
+          <!-- Kotak pertanyaan 2 -->
+        <div class="question-box" onclick="toggleAnswer(2)">
+          <div class="question">Apa yang dimaksud media queries?</div>
+          <div class="answer-notification">1 Answer <span><img src="./src/img/bookmark.png" width="10px"></span></div>
+          <div class="answer" id="answer2">Fitur CSS yg membuat tampilan website kita sesuai dgn berbagai perangkat</div>
+        </div>
+      
+          <!-- Kotak pertanyaan 3 -->
+        <div class="question-box" onclick="toggleAnswer(3)">
+          <div class="question">Kak gimana yaa cara membuat rounded button dengan CSS? Makasihh kak</div>
+          <div class="answer-notification">1 Answer <span><img src="./src/img/bookmark.png" width="10px"></span></div>
+          <div class="answer" id="answer3">Izin jawab, pake property border-radius kakkk </div>
+        </div>
+        <button class="more-button" onclick="showMoreQuestions()">More</button>
+      </div>
+    </div>
+    <!-- Question -->
+
+    <!-- Artikel -->
+    <div class="Artikel">
+      <h2>Read the newest article in Spuhin.id!</h2>
+      <div class="Artikel-section">
+        <div class="article">
+          <div class="card">
+            <img src="https://gtmetrix.com/static/r290/images/features-generic/gtmetrix-report-hero.png" alt="sekawan">
+            <a href="https://www.sekawanmedia.co.id/blog/cara-menggunakan-gtmetrix/" target="_blank"><div class="container">
+              <h4><b>Apa itu GTmetrix? Cara Menggunakan dan Meningkatkan Nilainya</b></h4> 
+              <p>Brand image adalah salah satu aspek paling krusial dalam dunia bisnis modern. Brand image digunakan untuk mengukur sejauh mana citra atau persepsi merek tertentu dalam pikiran konsumen.</p> 
+            </div></a>
+          </div>
+          <div class="card">
+            <img src="https://www.betterteam.com/images/it-engineer-job-description-4084x2918-2020123.jpeg?crop=40:21,smart&width=1200&dpr=2" alt="sekawan">
+            <a href="https://www.sekawanmedia.co.id/blog/engineering-adalah/" target="_blank"><div class="container">
+              <h4><b>Engineering adalah: Skill, Jenis, Gaji & Jurusan Kuliahnya</b></h4> 
+              <p>Engineering adalah disiplin ilmu teknik atau teknologi yang muncul dalam kehidupan untuk memudahkan pekerjaan manusia untuk merancang, membangun, dan memelihara struktur dan sistem. Pekerjaan pada bidang ini, antara lain, civil, mechanical, aerospace, software engineering, dan sebagainya.</p> 
+            </div>
+          </div></a>
+          <div class="card">
+            <img src="https://www.sekawanmedia.co.id/wp-content/uploads/2023/08/cara-mempercepat-loading-blog-1-1659413663.webp" alt="sekawan">
+            <a href="https://www.sekawanmedia.co.id/blog/cara-mempercepat-loading-website/" target="_blank"><div class="container">
+              <h4><b>11+ Cara Mempercepat Loading Website, Mudah & Anti Lemot!</b></h4> 
+              <p>Ada beberapa cara mempercepat loading website yang bisa Anda lakukan, di antaranya yaitu menghapus plugin, dann mengkompresi ukuran file.</p> 
+            </div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Artikel -->
+
+    <!-- Testimoni -->
+    <div class="testimoni">
+      <h2>What do they say about Spuhin.id?</h2>
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src=".\src\img\avatar(1).jpg" alt="avatar" width="100px" style="border-radius: 50%;">
+                <h3>Nam Joo Hyuk</h3>
+                <p>“Aku sangat merekomendasikan belajar HTML, CSS, dan JavaScript di Spuhin.id. Course dan tutorialnya mudah dipahami dan cocok untuk beginner.”</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src=".\src\img\avatar(2).jpg" alt="avatar" width="100px" style="border-radius: 50%;">
+                <h3>Aldi Taher</h3>
+                <p>“Look at the stars, look how they shine for youuu. Karena Spuhin.id, aku ngga bingung bikin website. I love you Spuhin.id. Wassalammualaikum Wr Wb.”</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src=".\src\img\avatar(3).jpeg" alt="avatar" width="100px" style="border-radius: 50%;">
+                <h3>Willy The Kid</h3>
+                <p>"[membka lptop] duh ak bingung gmn yh cara mbuat HTML forms [trsenyum] wah ada tutorialny di Spuhin.id, akhirny aku bisa mbuat HTML forms mkasih Spuhin.id."</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimoni -->
+
+    <!-- whats ? -->
+    <div class="whats">
+      <div class="content">
+        <button class="accordion">What is Spuhin.id?</button>
+        <div class="panel">
+          <p>Spuhin.id is an educational website that allows beginner or expert in software engineering to gain more knowledges in this field and create professional websites. We provide features such as course, tutorial, QnA, and article that easily accessed and make learning more enjoyable. Start your own website in a matter of hours now!</p>
+        </div>
+
+        <button class="accordion">What are our vision and missions?</button>
+        <div class="panel">
+          <p>Our vision is to be a platform for students who wants to learn software engineering from beginner to expert level. Our missions are making courses and learning materials easily accessed, free, and practical. We want students to be able to learn at any time, anywhere, and at their own pace. Furthermore, we support studying by discussion and sharing with other students.</p>
+        </div>
+
+        <button class="accordion">Who are the targets of Spuhin.id?</button>
+        <div class="panel">
+          <p>The target of our website are students from different backgrounds or majors that want to deepen their knowledge about software engineering. Our focus are students in Indonesia, but we're also open to students from overseas.</p>
+        </div>
+      </div>
+    </div>
+    <!-- whats ? -->
+
+    <!-- About -->
+    <div class="About">
+      <div class="aboutus">
+        <div class="aboutus-container">
+            <div class="as-content">
+                <div class="heading">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <p>Spuhin.id is an educational website that allows beginner or expert in software engineering to gain knowledge in this field and create professional websites. We provide features such as course, tutorial, QnA, and article that easily accessed and make learning more enjoyable. Start your own website in a matter of hours now!</p>
+                    <div class="button">
+                        <a href="team.html">Read More</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href=""><i class="fa-regular fa-envelope"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="./src/img/—Pngtree—astronaut spaceflight_5420858.png" alt="gambar-as">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright &copy Spuhin.id 2023</p>
+    </div>
+    <!-- About -->
+
+    <script src="./src/javascript/script.js"></script>
+</body>
+</html>
