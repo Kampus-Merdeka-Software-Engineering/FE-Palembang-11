@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 const questionContainer = document.getElementById("question-container");
 
 try {
-  const response = await fetch("https://serene-box-production.up.railway.app/utama");
+  const response = await fetch("tame-church-production.up.railway.app/utama");
   const data = await response.json();
   console.log(data);
 
@@ -93,7 +93,7 @@ const closedButton = document.getElementById("closed-button");
 
 
 try {
-  const response = await fetch("https://serene-box-production.up.railway.app/qna");
+  const response = await fetch("tame-church-production.up.railway.app/qna");
   const data = await response.json();
 
   data.forEach((questionData) => {
@@ -175,7 +175,7 @@ const formTanya = {
   pertanyaan: tanyaInput,
 };
 
-fetch("https://serene-box-production.up.railway.app/qna/add", {
+fetch("tame-church-production.up.railway.app", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -231,7 +231,7 @@ const formJawab = {
 };
 
 try {
-  const response = await fetch("https://serene-box-production.up.railway.app/qna/jawaban", {
+  const response = await fetch("tame-church-production.up.railway.app/qna/jawaban", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
