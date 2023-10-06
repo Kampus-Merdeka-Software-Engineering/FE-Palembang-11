@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 const questionContainer = document.getElementById("question-container");
 
 try {
-  const response = await fetch("/utama");
+  const response = await fetch("https://serene-box-production.up.railway.app/utama");
   const data = await response.json();
 
   data.forEach((questionData) => {
@@ -147,7 +147,6 @@ try {
 });
 
 
-// JavaScript
 document.addEventListener("DOMContentLoaded", () => {
 const addButton = document.getElementById("tambah-pertanyaan");
 const formPertanyaan = document.getElementById("form-pertanyaan");
