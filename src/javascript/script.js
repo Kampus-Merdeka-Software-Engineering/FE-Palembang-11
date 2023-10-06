@@ -45,6 +45,7 @@ const questionContainer = document.getElementById("question-container");
 try {
   const response = await fetch("https://serene-box-production.up.railway.app/utama");
   const data = await response.json();
+  console.log(data);
 
   data.forEach((questionData) => {
     const questionBox = document.createElement("div");
