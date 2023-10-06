@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 const questionContainer = document.getElementById("question-container");
 
 try {
-  const response = await fetch("https://serene-box-production.up.railway.app/utama");
+  const response = await fetch("https://serene-box-production.up.railway.app/qna");
   const data = await response.json();
   console.log(data);
 
