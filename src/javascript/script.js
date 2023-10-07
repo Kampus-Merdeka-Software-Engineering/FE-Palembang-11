@@ -162,7 +162,11 @@ closeButton.addEventListener("click", () => {
 });
 });
 
-function submitPertanyaan() {
+const form = document.getElementById("form-question");
+form.addEventListener("submit", submitPertanyaan);
+
+function submitPertanyaan(e) {
+e.preventDefault();
 const namaInput = document.getElementById("name").value;
 const tanyaInput = document.getElementById("pertanyaan").value;
 const submitButton = document.getElementById("button-submit");
@@ -186,7 +190,7 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   credentials: "same-origin", // Optional: Include credentials (cookies) when making same-origin requests
 })
   .then((request) => request.json()) // Parse the response as JSON
-  .then((data) => {
+  .then((respons) => {
     // Handle the response from the server if needed
     const formPertanyaana = document.getElementById("form-pertanyaan");
     formPertanyaana.style.display = "none";
