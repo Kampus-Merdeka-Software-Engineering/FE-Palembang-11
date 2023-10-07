@@ -186,8 +186,8 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   .then((response) => JSON.stringify(response.body))
   .then((data) => {
     // Tangani respons dari server di sini, jika diperlukan
-    const formPertanyaan = document.getElementById("form-pertanyaan");
-    formPertanyaan.style.display = "none";
+    const formPertanyaana = document.getElementById("form-pertanyaan");
+    formPertanyaana.style.display = "none";
     alert("Pertanyaan telah dikirim!");
 
     window.location.reload();
