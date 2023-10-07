@@ -151,13 +151,13 @@ try {
 document.addEventListener("DOMContentLoaded", () => {
 const addButton = document.getElementById("tambah-pertanyaan");
 const formPertanyaan = document.getElementById("form-pertanyaan");
-const closedButton = document.getElementById("closed-button");
+const closeButton = document.getElementById("close-button");
 
 addButton.addEventListener("click", () => {
   formPertanyaan.style.display = "block"; // Menampilkan formulir sebagai pop-up
 });
 
-closedButton.addEventListener("click", () => {
+closeButton.addEventListener("click", () => {
   formPertanyaan.style.display = "none"; // Menutup formulir saat tombol penutup ditekan
 });
 });
