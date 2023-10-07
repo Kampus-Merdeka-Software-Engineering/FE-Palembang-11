@@ -162,8 +162,8 @@ closeButton.addEventListener("click", () => {
 });
 });
 
-const form = document.getElementById("form-question");
-form.addEventListener("submit", submitPertanyaan);
+const formq = document.getElementById("form-question");
+formq.addEventListener("submit", submitPertanyaan);
 
 function submitPertanyaan(e) {
 e.preventDefault();
@@ -211,22 +211,26 @@ return false; // Prevent the default behavior of the "Kirim Pertanyaan" button
 const tanyaButton = document.getElementById("button-submit");
 tanyaButton.addEventListener("click", submitPertanyaan);
 
-async function submitJawaban() {
-// Mengambil nilai dari elemen HTML
-const jawabanText = document.getElementById("jawaban").value;
-const idQuestionInput = document.getElementById("id_question");
+const forma = document.getElementById("form-answer");
+forma.addEventListener("submit", submitJawaban)
 
-// Mengambil nilai idQuestion dari elemen input
-const idQuestion = idQuestionInput.value;
+async function submitJawaban(e) {
+  e.preventDefault();
+  // Mengambil nilai dari elemen HTML
+  const jawabanText = document.getElementById("jawaban").value;
+  const idQuestionInput = document.getElementById("id_question");
 
-// Pastikan idQuestion adalah tipe data INTEGER
-const idQuestionInt = parseInt(idQuestion, 10);
+  // Mengambil nilai idQuestion dari elemen input
+  const idQuestion = idQuestionInput.value;
 
-// Validasi tipe data jawabanText
-if (typeof jawabanText !== 'string') {
-  // Tindakan yang perlu diambil jika jawabanText bukan string
-  return;
-}
+  // Pastikan idQuestion adalah tipe data INTEGER
+  const idQuestionInt = parseInt(idQuestion, 10);
+
+  // Validasi tipe data jawabanText
+  if (typeof jawabanText !== 'string') {
+    // Tindakan yang perlu diambil jika jawabanText bukan string
+    return;
+  }
 
 // Data yang akan dikirimkan ke server
 const formJawab = {
