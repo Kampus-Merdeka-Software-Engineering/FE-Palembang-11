@@ -448,10 +448,13 @@ a.active,a:hover{
 
 .question {
   font-weight: bold;
+  margin: 5px;
 }
 
 .answer-notification {
   font-style: italic;
+  font-size: 11px;
+  margin: 5px;
 }
 
 .answer {
@@ -460,11 +463,12 @@ a.active,a:hover{
 }
 
 .hidden {
-  display: none;
+  display: block;
 }
 
 @media (max-width: 480px) {
   .Question{
+    margin-top: 30px;
     padding: 30px;
   }
 

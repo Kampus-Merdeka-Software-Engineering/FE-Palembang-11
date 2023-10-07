@@ -39,49 +39,49 @@ for (i = 0; i < acc.length; i++) {
 
 //Question function
 
-// document.addEventListener("DOMContentLoaded", async () => {
-// const questionContainer = document.getElementById("questioner-container");
+document.addEventListener("DOMContentLoaded", async () => {
+const questionContainer = document.getElementById("questioner-containerHome");
 
-// try {
-//   const response = await fetch("https://tame-church-production.up.railway.app/utama");
-//   const data = await response.json(JSON.stringify());
-//   console.log(data);
+try {
+  const response = await fetch("https://tame-church-production.up.railway.app/utama");
+  const data = await response.json(JSON.stringify());
+  console.log(data);
 
-//   data.forEach((questionData) => {
-//     const questionBox = document.createElement("div");
-//     questionBox.classList.add("question-box");
+  data.forEach((questionData) => {
+    const questionBox = document.createElement("div");
+    questionBox.classList.add("question-box");
 
-//     const questionDiv = document.createElement("div");
-//     questionDiv.classList.add("question");
-//     questionDiv.textContent = questionData.pertanyaan;
+    const questionDiv = document.createElement("div");
+    questionDiv.classList.add("question");
+    questionDiv.textContent = questionData.pertanyaan;
 
-//     const answerNotificationDiv = document.createElement("div");
-//     answerNotificationDiv.classList.add("answer-notification");
-//     answerNotificationDiv.textContent = `${questionData.jawaban.length} Jawaban`;
+    const answerNotificationDiv = document.createElement("div");
+    answerNotificationDiv.classList.add("answer-notification");
+    answerNotificationDiv.textContent = `${questionData.jawaban.length} Jawaban`;
 
-//     const answerDiv = document.createElement("div");
-//     answerDiv.classList.add("answer");
+    const answerDiv = document.createElement("div");
+    answerDiv.classList.add("answer");
 
-//     questionData.jawaban.forEach((jawaban) => {
-//       const jawabanP = document.createElement("p");
-//       jawabanP.textContent = jawaban;
-//       answerDiv.appendChild(jawabanP);
-//     });
+    questionData.jawaban.forEach((jawaban) => {
+      const jawabanP = document.createElement("p");
+      jawabanP.textContent = jawaban;
+      answerDiv.appendChild(jawabanP);
+    });
 
-//     questionBox.addEventListener("click", () => {
-//       answerDiv.classList.toggle("hidden");
-//     });
+    questionBox.addEventListener("click", () => {
+      answerDiv.classList.toggle("hidden");
+    });
 
-//     questionBox.appendChild(questionDiv);
-//     questionBox.appendChild(answerNotificationDiv);
-//     questionBox.appendChild(answerDiv);
+    questionBox.appendChild(questionDiv);
+    questionBox.appendChild(answerNotificationDiv);
+    questionBox.appendChild(answerDiv);
 
-//     questionContainer.appendChild(questionBox);
-//   });
-// } catch (error) {
-//   console.error("Error fetching data:", error);
-// }
-// });
+    questionContainer.appendChild(questionBox);
+  });
+} catch (error) {
+  console.error("Error fetching data:", error);
+}
+});
 
 document.addEventListener("DOMContentLoaded", async () => {
 const questionerContainer = document.getElementById("questioner-container");
