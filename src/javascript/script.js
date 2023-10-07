@@ -181,7 +181,9 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
     "Content-Type": "application/json",
   },
   body: JSON.stringify(formTanya),
-  redirect: "follow"
+  redirect: "follow",
+  mode: "cors", // Enable CORS
+  credentials: "same-origin", // Optional: Include credentials (cookies) when making same-origin requests
 })
   .then((response) => response.json()) // Parse the response as JSON
   .then((data) => {
