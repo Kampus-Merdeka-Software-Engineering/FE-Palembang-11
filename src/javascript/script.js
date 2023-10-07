@@ -228,6 +228,13 @@ if (typeof jawabanText !== 'string') {
   return;
 }
 
+const buttonJawaban = document.getElementsByClassName('question-box');
+const buttonJawabe = document.createElement('button');
+buttonJawabe.id = "tambah-pertanyaan";
+buttonJawabe.textContent = "Jawab"
+buttonJawaban.appendChild(buttonJawabe);
+
+
 // Data yang akan dikirimkan ke server
 const formJawab = {
   id_question: idQuestionInt,
