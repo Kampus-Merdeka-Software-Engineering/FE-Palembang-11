@@ -180,7 +180,7 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   headers: {
     "Content-Type": "application/json",
   },
-  body: JSON.stringify(formTanya),
+  body: formTanya,
 })
   .then((response) => JSON.stringify(response.body))
   .then((data) => {
