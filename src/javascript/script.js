@@ -185,7 +185,7 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   mode: "cors", // Enable CORS
   credentials: "same-origin", // Optional: Include credentials (cookies) when making same-origin requests
 })
-  .then((response) => response.json()) // Parse the response as JSON
+  .then((request) => request.json()) // Parse the response as JSON
   .then((data) => {
     // Handle the response from the server if needed
     const formPertanyaana = document.getElementById("form-pertanyaan");
