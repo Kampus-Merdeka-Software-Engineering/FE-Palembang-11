@@ -170,10 +170,17 @@ const submitButton = document.getElementById("button-submit");
 // Nonaktifkan tombol setelah diklik
 submitButton.disabled = true;
 
-const formTanya = {
+// const formTanya = {
+//   name: namaInput,
+//   pertanyaan: tanyaInput,
+// };
+
+const formTanya = JSON.stringify({
   name: namaInput,
   pertanyaan: tanyaInput,
-};
+});
+
+const axios = require('axios');
 
 fetch("https://tame-church-production.up.railway.app/qna/add", {
   method: "POST",
@@ -182,6 +189,9 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   },
   body: formTanya,
 })
+
+  axios.request(fetch)
+
   .then((response) => JSON.stringify(response.body))
   .then((data) => {
     // Tangani respons dari server di sini, jika diperlukan
