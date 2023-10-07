@@ -189,8 +189,8 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   mode: "cors", // Enable CORS
   credentials: "same-origin", // Optional: Include credentials (cookies) when making same-origin requests
 })
-  .then((request) => request.json()) // Parse the response as JSON
-  .then((respons) => {
+  .then((response) => response.json()) // Parse the response as JSON
+  .then((data) => {
     // Handle the response from the server if needed
     const formPertanyaana = document.getElementById("form-pertanyaan");
     formPertanyaana.style.display = "none";
@@ -227,13 +227,6 @@ if (typeof jawabanText !== 'string') {
   // Tindakan yang perlu diambil jika jawabanText bukan string
   return;
 }
-
-// const buttonJawaban = document.getElementsByClassName('question-box');
-// const buttonJawabe = document.createElement('button');
-// buttonJawabe.id = "tambah-pertanyaan";
-// buttonJawabe.textContent = "Jawab"
-// buttonJawaban.appendChild(buttonJawabe);
-
 
 // Data yang akan dikirimkan ke server
 const formJawab = {
