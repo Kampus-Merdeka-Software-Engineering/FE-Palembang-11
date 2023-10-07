@@ -212,7 +212,7 @@ const tanyaButton = document.getElementById("button-submit");
 tanyaButton.addEventListener("click", submitPertanyaan);
 
 const forma = document.getElementById("form-answer");
-forma.addEventListener("submit", submitJawaban)
+forma.addEventListener("submit", submitJawaban);
 
 async function submitJawaban(e) {
   e.preventDefault();
@@ -245,6 +245,7 @@ try {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(formJawab),
+    mode: "cors"
   });
 
   if (response.ok) {
@@ -265,8 +266,8 @@ try {
 }
 
 // Menambahkan event listener ke tombol submit jawaban
-const jawabanButton = document.getElementById("submit-jawaban");
-jawabanButton.addEventListener("click", submitJawaban);
+// const jawabanButton = document.getElementById("submit-jawaban");
+// jawabanButton.addEventListener("click", submitJawaban);
 
 //Question function
 
