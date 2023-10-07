@@ -170,16 +170,10 @@ const submitButton = document.getElementById("button-submit");
 // Nonaktifkan tombol setelah diklik
 submitButton.disabled = true;
 
-// const formTanya = {
-//   name: namaInput,
-//   pertanyaan: tanyaInput,
-// };
-
-const formTanya = JSON.stringify({
+const formTanya = {
   name: namaInput,
   pertanyaan: tanyaInput,
-});
-
+};
 
 fetch("https://tame-church-production.up.railway.app/qna/add", {
   method: "POST",
