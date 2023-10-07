@@ -40,7 +40,7 @@ for (i = 0; i < acc.length; i++) {
 //Question function
 
 document.addEventListener("DOMContentLoaded", async () => {
-const questionContainer = document.getElementById("question-container");
+const questionContainer = document.getElementById("questioner-container");
 
 try {
   const response = await fetch("https://tame-church-production.up.railway.app/utama");
