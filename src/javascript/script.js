@@ -109,7 +109,6 @@ try {
     answerNotificationDiv.textContent = `${questionData.jawaban.length} Jawaban`;
 
     const header = document.createElement("hr");
-    answerNotificationDiv.appendChild(header);
 
     const answerDiv = document.createElement("div");
     answerDiv.classList.add("answer");
@@ -140,6 +139,7 @@ try {
 
     questionBox.appendChild(questionDiv);
     questionBox.appendChild(answerNotificationDiv);
+    questionBox.appendChild(header);
     questionBox.appendChild(answerDiv);
     questionBox.appendChild(addButton);
 
