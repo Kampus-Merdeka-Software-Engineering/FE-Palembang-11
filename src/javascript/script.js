@@ -180,7 +180,6 @@ const formTanya = JSON.stringify({
   pertanyaan: tanyaInput,
 });
 
-const axios = require('axios');
 
 fetch("https://tame-church-production.up.railway.app/qna/add", {
   method: "POST",
@@ -190,10 +189,8 @@ fetch("https://tame-church-production.up.railway.app/qna/add", {
   body: formTanya,
 })
 
-  axios.request(fetch)
-
   .then((response) => JSON.stringify(response.body))
-  .then((data) => {
+  .then((formPertanyaan) => {
     // Tangani respons dari server di sini, jika diperlukan
     const formPertanyaan = document.getElementById("form-pertanyaan");
     formPertanyaan.style.display = "none";
