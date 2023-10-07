@@ -44,7 +44,7 @@ const questionContainer = document.getElementById("question-container");
 
 try {
   const response = await fetch("tame-church-production.up.railway.app/utama");
-  const data = await response.json();
+  const data = await response.json(JSON.stringify());
   console.log(data);
 
   data.forEach((questionData) => {
@@ -94,7 +94,7 @@ const closedButton = document.getElementById("closed-button");
 
 try {
   const response = await fetch("tame-church-production.up.railway.app/qna");
-  const data = await response.json();
+  const data = await response.json(JSON.stringify());
 
   data.forEach((questionData) => {
     const questionBox = document.createElement("div");
