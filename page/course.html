@@ -12,123 +12,134 @@
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
 
         html{
-        scroll-behavior: smooth;
+         scroll-behavior: smooth;
         }
 
         *{
-        box-sizing: border-box;
+         box-sizing: border-box;
         }
 
         h1,h2,h3,h4{
-        color: #213555;
+         color: #213555;
         }
 
         p{
-        color: #6B6B6B;
+         color: black;
         }
 
         body{
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
+         margin: 0;
+         font-family: 'Roboto', sans-serif;
         }
 
         a {
-            text-decoration: none;
+         text-decoration: none;
         }
         /* fots */
 
         /* navbar */
         nav{
-        background: #213555;
-        width: 100%;
-        padding: 14px;
-        position: fixed;
-        display: flex;
+         background: #213555;
+         width: 100%;
+         height: 80px;
+         padding: 14px;
+         position: fixed;
+         display: flex;
         }
 
-        label.logo{
-        font-family: 'Quicksand', sans-serif;
-        color: white;
-        font-size: 35px;
-        padding: 0 100px;
-        font-weight: bold;
+        .logo{
+         display: inline-block;
+         vertical-align: top;
+         width: 110px;
+         height: 60px;
+         margin-left: 100px;
+         margin-right: 200px;
         }
 
         nav ul{
-        float: right;
-        margin-right: 20px;
+         float: right;
+         margin-right: 20px;
         }
 
         nav ul li{
-        display: inline-block;
-        margin: 0 5px;
+         display: inline-block;
+         margin: 0 5px;
         }
 
         nav ul li a{
-        color: white;
-        font-size: 15px;
-        padding: 7px 13px;
-        border-radius: 3px;
-        text-transform: uppercase;
+         color: white;
+         font-size: 15px;
+         padding: 7px 13px;
+         border-radius: 3px;
+         text-transform: uppercase;
         }
 
         a.active,a:hover{
-        background: #E5D283;
-        transition: .5s;
+         background: #E5D283;
+         transition: .5s;
         }
 
         .checkbtn{
-        font-size: 30px;
-        color: white;
-        float: right;
-        margin-right: 40px;
-        cursor: pointer;
-        display: none;
+         font-size: 30px;
+         color: white;
+         float: right;
+         margin-right: 40px;
+         cursor: pointer;
+         display: none;
         }
 
         #check{
-        display: none;
+         display: none;
         }
 
         @media (max-width: 952px){
-        label.logo{
-            font-size: 30px;
-            padding-left: 10px;
-        }
-        nav ul li a{
-            font-size: 16px;
-        }
+            nav ul li a{
+             font-size: 16px;
+            }
         }
 
         @media (max-width: 1010px){
-        .checkbtn{
-            display: block;
-        }
-        ul{
-            position: fixed;
-            width: 50%;
-            height: 100vh;
-            background: #2c3e50;
-            left: -100%;
-            text-align: center;
-            transition: all .5s;
-            margin-top: 47px;
-        }
-        nav ul li{
-            display: block;
-            margin: 50px 0 0 -40px;
-            line-height: 30px;
-        }
-        nav ul li a{
-            font-size: 20px;
-        }
-        a:hover,a.active{
-            background: none;
-            color: #E5D283;
-        }
-        #check:checked ~ ul{
-            left: 0;
-        }
+            .logo{
+             display: inline-block;
+             vertical-align: top;
+             width: 110px;
+             height: 60px;
+             margin-left: 20px;
+            }
+
+            .checkbtn{
+             display: block;
+            }
+
+            ul{
+             position: fixed;
+             width: 50%;
+             height: 100vh;
+             background: #2c3e50;
+             left: -100%;
+             text-align: center;
+             transition: all .5s;
+             margin-top: 65px;
+            }
+
+            nav ul li{
+             display: block;
+             margin: 50px 0 0 -40px;
+             line-height: 30px;
+            }
+
+            nav ul li a{
+             font-size: 20px;
+            }
+
+            a:hover,a.active{
+             background: none;
+             color: #E5D283;
+            }
+
+            #check:checked ~ ul{
+             left: 0;
+            }
         }
         /* navbar */
 
@@ -179,11 +190,15 @@
 
         @media screen and (max-width: 870px) {
             .course-section{
-            display: inline-block;
+                display: inline-block;
+            }
+
+            .course-title {
+                color: #213555;
+                padding: 0 0 0 20px;
             }
         }
         /* course */
-
     </style>
 </head>
 <body>
@@ -193,7 +208,7 @@
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Spuhin.id</label>
+        <img class="logo" src="..\src\img\logo.png" alt="logo">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a class="active" href="course.html">Course</a></li>

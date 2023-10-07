@@ -7,306 +7,349 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://kit.fontawesome.com/6ac5fc642c.js" crossorigin="anonymous"></script>
-<style>
-/* fots */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
+    <style>
+      /* fots */
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto&display=swap');
 
-html{
-  scroll-behavior: smooth;
-}
+        html{
+          scroll-behavior: smooth;
+        }
 
-*{
-  box-sizing: border-box;
-}
+        *{
+          box-sizing: border-box;
+        }
 
-h1,h2,h3,h4{
-  color: #213555;
-}
+        h1,h2,h3,h4{
+          color: #213555;
+        }
 
-p{
-  color: #6B6B6B;
-}
+        p{
+          color: black;
+        }
 
-body{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: url("../src/img/bg-tutor.png");
-}
-a {
-    text-decoration: none;
-}
+        body{
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url("../src/img/bg-tutor.png");
+        }
+        a {
+            text-decoration: none;
+        }
 
-/* navbar */
+        /* navbar */
+        nav{
+         background: #213555;
+         width: 100%;
+         height: 80px;
+         padding: 14px;
+         position: fixed;
+         display: flex;
+        }
 
-nav{
-  background: #213555;
-  width: 100%;
-  padding: 14px;
-  position: fixed;
-  display: flex;
-}
-label.logo{
-  font-family: 'Quicksand', sans-serif;
-  color: white;
-  font-size: 35px;
-  padding: 0 100px;
-  font-weight: bold;
-}
-nav ul{
-  float: right;
-  margin-right: 20px;
-}
-nav ul li{
-  display: inline-block;
-  margin: 0 5px;
-}
-nav ul li a{
-  color: white;
-  font-size: 15px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-a.active,a:hover{
-  background: #E5D283;
-  transition: .5s;
-}
-.checkbtn{
-  font-size: 30px;
-  color: white;
-  float: right;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 10px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 1010px){
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
-    width: 50%;
-    height: 100vh;
-    background: #2c3e50;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-    margin-top: 47px;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0 0 -40px;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #E5D283;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
-}
-/* navbar */   
+        .logo{
+         display: inline-block;
+         vertical-align: top;
+         width: 110px;
+         height: 60px;
+         margin-left: 100px;
+         margin-right: 200px;
+        }
 
-/* Right-Bar */
-#Bar.bar {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  padding: 40px 5px;
-  padding-top:70px;
-  margin-bottom: 70px;
-  background: #213555;
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
-}
+        nav ul{
+         float: right;
+         margin-right: 20px;
+        }
 
-#Bar.bar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  line-height: 24px;
-  opacity: .6;
-  margin-bottom: 20px;
-  text-align: center;
-}
+        nav ul li{
+         display: inline-block;
+         margin: 0 5px;
+        }
 
-#Bar.bar span.icon {
-  display: block;
-}
+        nav ul li a{
+         color: white;
+         font-size: 15px;
+         padding: 7px 13px;
+         border-radius: 3px;
+         text-transform: uppercase;
+        }
 
-#Bar.bar a:hover {
-  opacity: 1;
-}
+        a.active,a:hover{
+         background: #E5D283;
+         transition: .5s;
+        }
 
-#Bar.bar .icon svg {
-  color: white;
-}
-#Bar.bar {
-  margin-top: 30px;
-  border-top: 1px solid #41414d;
-  padding-top: 40px;
-}
-#Bar.bar .btns {
-  border-top: 1px solid #41414d;
-  padding-top: 30px;
-}
-#Bar.bar a span.fa {
-  font-size: 26px;
-}
-#Bar.bar .no-margin-bottom{
-  margin-bottom:0;
-}
-.toggle-right-sidebar span {
-  background: #0D1326;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color:white;
-  border-radius: 50px;
-  font-size: 26px;
-  cursor: pointer;
-  opacity: .5;
-}
-.pull-right {
-  float: right;
-  position: fixed;
-  right: 0px;
-  top: 70px;
-  width: 90px;
-  text-align: center;
-}
+        .checkbtn{
+         font-size: 30px;
+         color: white;
+         float: right;
+         margin-right: 40px;
+         cursor: pointer;
+         display: none;
+        }
 
-#right-sidebar {
-  width: 90px;
-  position: fixed;
-  height: 100%;
-  z-index: 1000;
-  right: 0px;
-  top: 0;
-  margin-top: 60px;
-  transition: all .5s ease-in-out;
-  overflow-y: auto;
-}
+        #check{
+         display: none;
+        }
 
-.hide-right-bar-notifications {
-  margin-right: -300px !important;
+        @media (max-width: 952px){
+            nav ul li a{
+             font-size: 16px;
+            }
+        }
 
-}
+        @media (max-width: 1010px){
+            .logo{
+             display: inline-block;
+             vertical-align: top;
+             width: 110px;
+             height: 60px;
+             margin-left: 20px;
+            }
 
-@media (max-width: 992px) {
-  #Bar.bar a.desktop-mode{
-      display: none;
+            .checkbtn{
+             display: block;
+            }
 
-  }
-}
-@media (max-width: 767px) {
-  #Bar.bar a.tablet-mode{
-      display: none;
+            ul{
+             position: fixed;
+             width: 50%;
+             height: 100vh;
+             background: #2c3e50;
+             left: -100%;
+             text-align: center;
+             transition: all .5s;
+             margin-top: 65px;
+            }
 
-  }
-}
-@media (max-width: 568px) {
-  #Bar.bar a.mobile-mode{
-      display: none;
-  }
-  #Bar.bar {
-      margin-top: 0px;
-      border-top: none;
-      padding-top: 0px;
-  }
-  #right-sidebar,.pull-right {
-      width: 90px;
-  }
-  #Bar.bar .no-margin-bottom-mobile{
-      margin-bottom: 0;
-  }
-}
-/* Right-Bar */
+            nav ul li{
+             display: block;
+             margin: 50px 0 0 -40px;
+             line-height: 30px;
+            }
 
-/* Tutorial */
-.Tutorial{
-  margin: 0 0 100px 0;
-  display: flex;
-  justify-content: center;
-}
+            nav ul li a{
+             font-size: 20px;
+            }
 
-.tutorial{
-  margin: 100px;
-  width: 70%;
-  border-radius: 10px;
-  border: 3px solid #213555;
-  background-color: #D1DAE6;
-  padding: 20px;
-}
+            a:hover,a.active{
+             background: none;
+             color: #E5D283;
+            }
 
-.tutorial-section{
-  display: flex;
-}
+            #check:checked ~ ul{
+             left: 0;
+            }
+          }
+        /* navbar */   
 
-.tutor a{
-  color: #213555;
-  }
+        /* Right-Bar */
+        #Bar.bar {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 9999;
+          padding: 40px 5px;
+          padding-top:70px;
+          margin-bottom: 70px;
+          background: #213555;
+          border-top-left-radius: 9px;
+          border-bottom-left-radius: 9px;
+        }
 
-.tutor{
-  width: 25%;
-  margin: 0 10px;
-  padding: 10px;
-  cursor: pointer;
-}
+        #Bar.bar a {
+          display: block;
+          color: white;
+          text-decoration: none;
+          line-height: 24px;
+          opacity: .6;
+          margin-bottom: 20px;
+          text-align: center;
+        }
 
-.tutor-box img{
-  border: 2px solid #213555;
-  border-radius: 10px;
-  transition: 0.2s;
-}
+        #Bar.bar span.icon {
+          display: block;
+        }
 
-.tutor-box img:hover{
-  border: 5px solid #E5D283;
-}
+        #Bar.bar a:hover {
+          opacity: 1;
+        }
 
-.tutorial .text{
-  color: #213555;
-}
+        #Bar.bar .icon svg {
+          color: white;
+        }
+        #Bar.bar {
+          margin-top: 30px;
+          border-top: 1px solid #41414d;
+          padding-top: 40px;
+        }
+        #Bar.bar .btns {
+          border-top: 1px solid #41414d;
+          padding-top: 30px;
+        }
+        #Bar.bar a span.fa {
+          font-size: 26px;
+        }
+        #Bar.bar .no-margin-bottom{
+          margin-bottom:0;
+        }
+        .toggle-right-sidebar span {
+          background: #0D1326;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color:white;
+          border-radius: 50px;
+          font-size: 26px;
+          cursor: pointer;
+          opacity: .5;
+        }
+        .pull-right {
+          float: right;
+          position: fixed;
+          right: 0px;
+          top: 70px;
+          width: 90px;
+          text-align: center;
+        }
 
-@media screen and (max-width: 1050px) {
-  .text p{
-    font-size: 16px;
-  }
+        #right-sidebar {
+          width: 90px;
+          position: fixed;
+          height: 100%;
+          z-index: 1000;
+          right: 0px;
+          top: 0;
+          margin-top: 60px;
+          transition: all .5s ease-in-out;
+          overflow-y: auto;
+        }
 
-  .Tutorial{
-    width: 100%;
-  }
+        .hide-right-bar-notifications {
+          margin-right: -300px !important;
 
-  .tutorial-section{
-    display: block;
-  }
-  .tutor{
-    width: 250px;
-    margin: 10px 0 10px 0;
-  }
-}
-/* Tutorial */
+        }
 
-</style>
+        @media (max-width: 992px) {
+          #Bar.bar a.desktop-mode{
+              display: none;
+
+          }
+        }
+        @media (max-width: 767px) {
+          #Bar.bar a.tablet-mode{
+              display: none;
+
+          }
+        }
+        @media (max-width: 568px) {
+          #Bar.bar a.mobile-mode{
+              display: none;
+          }
+          #Bar.bar {
+              margin-top: 0px;
+              border-top: none;
+              padding-top: 0px;
+          }
+          #right-sidebar,.pull-right {
+              width: 90px;
+          }
+          #Bar.bar .no-margin-bottom-mobile{
+              margin-bottom: 0;
+          }
+        }
+        /* Right-Bar */
+
+        /* Tutorial */
+        .Tutorial{
+          margin: 0 0 100px 0;
+          display: flex;
+          justify-content: center;
+        }
+
+        .tutorial {
+          width: 70%;
+          border-radius: 10px;
+          border: 3px solid #213555;
+          background-color: #D1DAE6;
+          padding: 20px;
+          margin-top: 100px;
+        }
+
+        #html-section{
+          display: flex;
+        }
+
+        #css-section{
+          display: flex;
+        }
+
+        #javascript-section{
+          display: flex;
+        }
+
+        #nodejs-section{
+          display: flex;
+        }
+
+        .tutor a{
+          color: #213555;
+          }
+
+        .tutor{
+          width: 25%;
+          margin: 0 10px;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        .tutor-box img{
+          border: 2px solid #213555;
+          border-radius: 10px;
+          transition: 0.2s;
+        }
+
+        .tutor-box img:hover{
+          border: 5px solid #E5D283;
+        }
+
+        .tutorial .text{
+          color: #213555;
+        }
+
+        @media screen and (max-width: 1050px) {
+          .text p{
+            font-size: 16px;
+          }
+
+          .Tutorial{
+            width: 100%;
+          }
+
+          #html-section{
+            display: inline-block;
+          }
+
+          #css-section{
+            display: inline-block;
+          }
+
+          #javascript-section{
+            display: inline-block;
+          }
+
+          #nodejs-section{
+            display: inline-block;
+          }
+
+          .tutor{
+            width: 100%;
+            margin: 10px 0 10px 0;
+          }
+        }
+        /* Tutorial */
+    </style>
 </head>
 <body>
 <!-- navbar-->
@@ -315,7 +358,7 @@ a.active,a:hover{
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo">Spuhin.id</label>
+    <img class="logo" src="..\src\img\logo.png" alt="logo">
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="course.html">Course</a></li>
@@ -331,25 +374,25 @@ a.active,a:hover{
     <div class="tab-notification" data-example-id="togglable-tabs">
         <div id="Bar" class="bar">
             <div class="btns">
-            <a href="#">
+            <a href="tutorial.html#html-section">
                 <span class="icon">
                   <i class="fa-brands fa-html5"></i>
                 </span>
                 <span class="text">HTML</span>
             </a>
-            <a href="#">
+            <a href="tutorial.html#css-section">
                 <span class="icon">
                   <i class="fa-solid fa-code"></i>
                 </span>
                 <span class="text">CSS</span>
             </a>
-            <a href="#">
+            <a href="tutorial.html#javascript-section">
                 <span class="icon">
                   <i class="fa-brands fa-js"></i>
                 </span>
                 <span class="text">JavaScript</span>
             </a>
-            <a href="#" class="no-margin-bottom-mobile">
+            <a href="tutorial.html#nodejs-section" class="no-margin-bottom-mobile">
               <span class="icon">
                 <i class="fa-brands fa-node-js"></i>
               </span>
@@ -367,10 +410,10 @@ a.active,a:hover{
 <div class="Tutorial">
   <div class="tutorial">
     <div class="text">
-      <h1>HTML</h1>
-      <p>With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!</p>
-      <!-- playlist -->
-      <div class="tutorial-section">
+      <!-- HTML Section -->
+      <h2>HTML Tutorial</h2>
+      <p>HTML is the standard markup language for making web pages.</p>
+      <div id="html-section">
         <div class="tutor">
           <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">
             <div class="tutor-box">
@@ -407,53 +450,150 @@ a.active,a:hover{
                 <img src="https://i.ytimg.com/vi/PwWHL3RyQgk/maxresdefault.jpg" height="178.3px" width="100%" alt="navbar">
               </div>
               <div class="text-judul">
-                <p>Navbar</p>
+                <p>Navigation Bar</p>
               </div>
             </a>
         </div>
       </div>
-      <div class="tutorial-section">
+      <!-- HTML Section -->
+      <!-- CSS Section -->
+      <h2>CSS Tutorial</h2>
+      <p>CSS is used to style and lay out web pages.</p>
+      <div id="css-section">
         <div class="tutor">
-          <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">
             <div class="tutor-box">
-              <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhdOMIyxmTIGWMBW6slzzAM9d3ktTj_hnilI0w96EBKESQPDgJacnatZH7HaGK4ihD2g8Ouuh415Cn5kPY1g8SUxVQE4boMxHruh1MQ_hMM4DLqq_IornFfqeoxibMuikzMEbe6yGJPxIIgAD2HSaabJ5AeptI7nmFCcxrovzUyFy6F1WHMN0Ln9nNTtQ=s804" height="178.3px" width="100%" alt="formlogin">
+              <img src: src="https://cms-assets.tutsplus.com/uploads/users/71/courses/1282/preview_image/getting-started-with-css-multi-column-layout-400x277.png" height="178.3px" width="100%" alt="multiplecolumn">
             </div>
             <div class="text-judul">
-              <p>Form Login</p>
+              <p>Multiple-column Layout</p>
             </div>
           </a>
         </div>
         <div class="tutor">
-          <a href="https://www.w3schools.com/howto/howto_css_table_zebra.asp">
+          <a href=" https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox ">
             <div class="tutor-box">
-              <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Zhu5E2Bm--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/02lxssgxrwv7ywp2lhix.jpg" height="178.3px" width="100%" alt="table">
+              <img src="https://miro.medium.com/v2/resize:fit:434/1*iigDGiNFBOUVJQ_07C1B2g.png" height="178.3px" width="100%" alt="flexbox">
             </div>
             <div class="text-judul">
-              <p>Table Zebra</p>
+              <p>Flexbox</p>
             </div>
           </a>
         </div>
         <div class="tutor">
-          <a href="https://www.w3schools.com/howto/howto_css_alert_buttons.asp">
+          <a href="https://www.w3schools.com/Css/css3_shadows.asp">
             <div class="tutor-box">
-              <img src="https://nikitahl.com/images/button-styles/buttons-chrome.png" height="178.3px" width="100%" alt="button">
+              <img src="https://blog.logrocket.com/wp-content/uploads/2022/02/layered-shadow-border.png" height="178.3px" width="100%" alt="shadoweffects">
             </div>
             <div class="text-judul">
-              <p>Button</p>
+              <p>Shadow Effects</p>
             </div>
           </a>
         </div>
         <div class="tutor">
-            <a href="https://www.w3schools.com/howto/howto_css_navbar_icon.asp">
+            <a href="https://www.w3schools.com/css/css3_borders.asp">
               <div class="tutor-box">
-                <img src="https://i.ytimg.com/vi/PwWHL3RyQgk/maxresdefault.jpg" height="178.3px" width="100%" alt="navbar">
+                <img src="https://www.webdesignerdepot.com/cdn-origin/uploads/2018/10/002-4.jpg" height="178.3px" width="100%" alt="roundedcorners">
               </div>
               <div class="text-judul">
-                <p>Navbar</p>
+                <p>Rounded Corners</p>
               </div>
             </a>
         </div>
       </div>
+      <!-- CSS Section -->
+      <!-- JavaScript Section -->
+      <h2>JavaScript Tutorial</h2>
+      <p>JavaScript is used to make dynamic and interactive web pages</p>
+      <div id="javascript-section">
+        <div class="tutor">
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings">
+            <div class="tutor-box">
+              <img src="https://cestmonvoyage.files.wordpress.com/2015/10/unnamed-qq-screenshot20151001081020.jpg" height="178.3px" width="100%" alt="handlingstring">
+            </div>
+            <div class="text-judul">
+              <p>Handling Text - String</p>
+            </div>
+          </a>
+        </div>
+        <div class="tutor">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">
+            <div class="tutor-box">
+              <img src="https://www.oreilly.com/api/v2/epubs/9781491914892/files/assets/lejs_0402.png" height="178.3px" width="100%" alt="controlflow">
+            </div>
+            <div class="text-judul">
+              <p>Control Flow</p>
+            </div>
+          </a>
+        </div>
+        <div class="tutor">
+          <a href="https://expressjs.com/en/guide/routing.html">
+            <div class="tutor-box">
+              <img src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes/mvc_express.png" height="178.3px" width="100%" alt="expressroute">
+            </div>
+            <div class="text-judul">
+              <p>Routing with Express</p>
+            </div>
+          </a>
+        </div>
+        <div class="tutor">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions ">
+              <div class="tutor-box">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*cpweITGZb0NXVhU9gYc8Lw.png" height="178.3px" width="100%" alt="arrow function">
+              </div>
+              <div class="text-judul">
+                <p>Arrow Function</p>
+              </div>
+            </a>
+        </div>
+      </div>
+      <!-- JavaScript Section -->
+      <!-- Node.js Section -->
+      <h2>Node.js Tutorial</h2>
+      <p>Node.js is used to build backend of websites and application using JavaScript</p>
+      <div id="nodejs-section">
+        <div class="tutor">
+          <a href="https://www.w3schools.com/nodejs/nodejs_http.asp">
+            <div class="tutor-box">
+              <img src="https://kindsonthegenius.com/nodejs/wp-content/uploads/2019/09/Web-Application-Architecture.jpg?189db0&189db0" height="178.3px" width="100%" alt="httpmodule">
+            </div>
+            <div class="text-judul">
+              <p>HTTP Module</p>
+            </div>
+          </a>
+        </div>
+        <div class="tutor">
+          <a href="https://www.tutorialspoint.com/nodejs/nodejs_npm.htm">
+            <div class="tutor-box">
+              <img src="https://miro.medium.com/v2/resize:fit:1400/1*y5YLuOKO5XM7MOzve6XsDQ.png" height="178.3px" width="100%" alt="npm">
+            </div>
+            <div class="text-judul">
+              <p>NPM</p>
+            </div>
+          </a>
+        </div>
+        <div class="tutor">
+          <a href="https://www.geeksforgeeks.org/blocking-and-non-blocking-in-node-js/">
+            <div class="tutor-box">
+              <img src="https://www.cronj.com/blog/wp-content/uploads/Cycle.png" height="178.3px" width="100%" alt="blocking">
+            </div>
+            <div class="text-judul">
+              <p>Blocking and Non-Blocking</p>
+            </div>
+          </a>
+        </div>
+        <div class="tutor">
+            <a href="https://www.tutorialspoint.com/nodejs/nodejs_event_loop.htm">
+              <div class="tutor-box">
+                <img src="https://www.cronj.com/blog/wp-content/uploads/Event-Loop.png" height="178.3px" width="100%" alt="eventloop">
+              </div>
+              <div class="text-judul">
+                <p>Event Loop</p>
+              </div>
+            </a>
+        </div>
+      </div>
+      <!-- Node.js Section -->
     </div>
   </div>
 </div>
