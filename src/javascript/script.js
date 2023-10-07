@@ -175,7 +175,7 @@ const formTanya = {
   pertanyaan: tanyaInput,
 };
 
-fetch("https://tame-church-production.up.railway.app", {
+fetch("https://tame-church-production.up.railway.app/qna/add", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
