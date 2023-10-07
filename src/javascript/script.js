@@ -170,38 +170,77 @@ const submitButton = document.getElementById("button-submit");
 // Nonaktifkan tombol setelah diklik
 submitButton.disabled = true;
 
-const formTanya = {
-  name: namaInput,
-  pertanyaan: tanyaInput,
+// const formTanya = {
+//   name: namaInput,
+//   pertanyaan: tanyaInput,
+// };
+
+// fetch("https://tame-church-production.up.railway.app/qna/add", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: formTanya,
+// })
+
+//   .then((response) => JSON.stringify(response.body))
+//   .then((data) => {
+//     // Tangani respons dari server di sini, jika diperlukan
+//     const formPertanyaana = document.getElementById("form-pertanyaan");
+//     formPertanyaana.style.display = "none";
+//     alert("Pertanyaan telah dikirim!");
+
+//     window.location.reload();
+
+//     // Aktifkan kembali tombol setelah pengiriman selesai
+//     submitButton.disabled = false;
+//   })
+//   .catch((error) => {
+//     console.error("Terjadi kesalahan:", error);
+//     alert("Terjadi kesalahan saat mengirim pertanyaan.");
+
+//     // Aktifkan kembali tombol setelah terjadi kesalahan
+//     submitButton.disabled = false;
+//   });
+
+const axios = require('axios');
+let data = JSON.stringify({
+  "name": namaInput,
+  "pertanyaan": tanyaInput
+});
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://tame-church-production.up.railway.app/qna/add',
+  headers: { 
+    'Content-Type': 'application/json'
+  },
+  data : data
 };
 
-fetch("https://tame-church-production.up.railway.app/qna/add", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: formTanya,
-})
-
-  .then((response) => JSON.stringify(response.body))
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data))
   .then((data) => {
-    // Tangani respons dari server di sini, jika diperlukan
-    const formPertanyaana = document.getElementById("form-pertanyaan");
-    formPertanyaana.style.display = "none";
-    alert("Pertanyaan telah dikirim!");
-
-    window.location.reload();
-
-    // Aktifkan kembali tombol setelah pengiriman selesai
-    submitButton.disabled = false;
-  })
-  .catch((error) => {
-    console.error("Terjadi kesalahan:", error);
-    alert("Terjadi kesalahan saat mengirim pertanyaan.");
-
-    // Aktifkan kembali tombol setelah terjadi kesalahan
-    submitButton.disabled = false;
-  });
+        // Tangani respons dari server di sini, jika diperlukan
+        const formPertanyaana = document.getElementById("form-pertanyaan");
+        formPertanyaana.style.display = "none";
+        alert("Pertanyaan telah dikirim!");
+    
+        window.location.reload();
+    
+        // Aktifkan kembali tombol setelah pengiriman selesai
+        submitButton.disabled = false;
+      })
+      .catch((error) => {
+        console.error("Terjadi kesalahan:", error);
+        alert("Terjadi kesalahan saat mengirim pertanyaan.");
+    
+        // Aktifkan kembali tombol setelah terjadi kesalahan
+        submitButton.disabled = false;
+      });
+})
 
 return false; // Mencegah perilaku default tombol "Kirim Pertanyaan"
 }
