@@ -74,7 +74,7 @@ try {
 
     questionBox.appendChild(questionDiv);
     questionBox.appendChild(answerNotificationDiv);
-    questionBox.appendChild(answerDiv);
+    //questionBox.appendChild(answerDiv);
 
     questionContainer.appendChild(questionBox);
   });
