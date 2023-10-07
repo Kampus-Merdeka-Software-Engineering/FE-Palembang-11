@@ -43,8 +43,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 const questionContainer = document.getElementById("question-container");
 
 try {
-  const response = await fetch("/utama");
+  const response = await fetch("tame-church-production.up.railway.app/utama");
   const data = await response.json();
+  console.log(data);
 
   data.forEach((questionData) => {
     const questionBox = document.createElement("div");
@@ -92,7 +93,7 @@ const closedButton = document.getElementById("closed-button");
 
 
 try {
-  const response = await fetch("/qna");
+  const response = await fetch("tame-church-production.up.railway.app/qna");
   const data = await response.json();
 
   data.forEach((questionData) => {
@@ -147,7 +148,6 @@ try {
 });
 
 
-// JavaScript
 document.addEventListener("DOMContentLoaded", () => {
 const addButton = document.getElementById("tambah-pertanyaan");
 const formPertanyaan = document.getElementById("form-pertanyaan");
@@ -175,7 +175,7 @@ const formTanya = {
   pertanyaan: tanyaInput,
 };
 
-fetch("/qna/add", {
+fetch("tame-church-production.up.railway.app", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -231,7 +231,7 @@ const formJawab = {
 };
 
 try {
-  const response = await fetch("/qna/jawaban", {
+  const response = await fetch("tame-church-production.up.railway.app/qna/jawaban", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
