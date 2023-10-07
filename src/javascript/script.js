@@ -162,73 +162,97 @@ closeButton.addEventListener("click", () => {
 });
 });
 
-function submitPertanyaan() {
-const namaInput = document.getElementById("name").value;
-const tanyaInput = document.getElementById("pertanyaan").value;
-const submitButton = document.getElementById("button-submit");
+// function submitPertanyaan() {
+// const namaInput = document.getElementById("name").value;
+// const tanyaInput = document.getElementById("pertanyaan").value;
+// const submitButton = document.getElementById("button-submit");
 
-// Nonaktifkan tombol setelah diklik
-submitButton.disabled = true;
+// // Nonaktifkan tombol setelah diklik
+// submitButton.disabled = true;
 
-const formTanya = {
-  name: namaInput,
-  pertanyaan: tanyaInput,
-};
+// const formTanya = {
+//   name: namaInput,
+//   pertanyaan: tanyaInput,
+// };
 
-fetch("https://tame-church-production.up.railway.app/qna/add", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
+// fetch("https://tame-church-production.up.railway.app/qna/add", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify(formTanya),
+// })
+//   .then((response) => response.json(JSON.stringify(response.body)))
+//   .then((data) => {
+//     // Tangani respons dari server di sini, jika diperlukan
+//     const formPertanyaan = document.getElementById("form-pertanyaan");
+//     formPertanyaan.style.display = "none";
+//     alert("Pertanyaan telah dikirim!");
+
+//     window.location.reload();
+
+//     // Aktifkan kembali tombol setelah pengiriman selesai
+//     submitButton.disabled = false;
+//   })
+//   .catch((error) => {
+//     console.error("Terjadi kesalahan:", error);
+//     alert("Terjadi kesalahan saat mengirim pertanyaan.");
+
+//     // Aktifkan kembali tombol setelah terjadi kesalahan
+//     submitButton.disabled = false;
+//   });
+
+// return false; // Mencegah perilaku default tombol "Kirim Pertanyaan"
+// }
+// const tanyaButton = document.getElementById("button-submit");
+// tanyaButton.addEventListener("click", submitPertanyaan);
+
+// async function submitJawaban() {
+// // Mengambil nilai dari elemen HTML
+// const jawabanText = document.getElementById("jawaban").value;
+// const idQuestionInput = document.getElementById("id_question");
+
+// // Mengambil nilai idQuestion dari elemen input
+// const idQuestion = idQuestionInput.value;
+
+// // Pastikan idQuestion adalah tipe data INTEGER
+// const idQuestionInt = parseInt(idQuestion, 10);
+
+// // Validasi tipe data jawabanText
+// if (typeof jawabanText !== 'string') {
+//   // Tindakan yang perlu diambil jika jawabanText bukan string
+//   return;
+// }
+
+// // Data yang akan dikirimkan ke server
+// const formJawab = {
+//   id_question: idQuestionInt,
+//   jawaban: jawabanText,
+// };
+
+let data = JSON.stringify({
+  "name": "sdffdfdf",
+  "pertanyaan": "dfdfdfdfd"
+});
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://tame-church-production.up.railway.app/qna/add',
+  headers: { 
+    'Content-Type': 'application/json'
   },
-  body: JSON.stringify(formTanya),
-})
-  .then((response) => response.json(JSON.stringify(response.body)))
-  .then((data) => {
-    // Tangani respons dari server di sini, jika diperlukan
-    const formPertanyaan = document.getElementById("form-pertanyaan");
-    formPertanyaan.style.display = "none";
-    alert("Pertanyaan telah dikirim!");
-
-    window.location.reload();
-
-    // Aktifkan kembali tombol setelah pengiriman selesai
-    submitButton.disabled = false;
-  })
-  .catch((error) => {
-    console.error("Terjadi kesalahan:", error);
-    alert("Terjadi kesalahan saat mengirim pertanyaan.");
-
-    // Aktifkan kembali tombol setelah terjadi kesalahan
-    submitButton.disabled = false;
-  });
-
-return false; // Mencegah perilaku default tombol "Kirim Pertanyaan"
-}
-const tanyaButton = document.getElementById("button-submit");
-tanyaButton.addEventListener("click", submitPertanyaan);
-
-async function submitJawaban() {
-// Mengambil nilai dari elemen HTML
-const jawabanText = document.getElementById("jawaban").value;
-const idQuestionInput = document.getElementById("id_question");
-
-// Mengambil nilai idQuestion dari elemen input
-const idQuestion = idQuestionInput.value;
-
-// Pastikan idQuestion adalah tipe data INTEGER
-const idQuestionInt = parseInt(idQuestion, 10);
-
-// Validasi tipe data jawabanText
-if (typeof jawabanText !== 'string') {
-  // Tindakan yang perlu diambil jika jawabanText bukan string
-  return;
-}
-
-// Data yang akan dikirimkan ke server
-const formJawab = {
-  id_question: idQuestionInt,
-  jawaban: jawabanText,
+  data : data
 };
+
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+
 
 try {
   const response = await fetch("https://tame-church-production.up.railway.app/qna/jawaban", {
@@ -254,7 +278,7 @@ try {
   console.error("Terjadi kesalahan:", error);
   alert("Terjadi kesalahan saat mengirim pertanyaan.");
 }
-}
+// }
 
 // Menambahkan event listener ke tombol submit jawaban
 const jawabanButton = document.getElementById("submit-jawaban");
