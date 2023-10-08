@@ -89,15 +89,19 @@
         margin: 5px;
       }
 
+      .question-box p{
+        margin-top :3px
+      }
+
       .answer-notification {
         font-style: italic;
         font-size: 11px;
-        margin: 5px;
+        margin: 5px 0 10px 0;
       }
 
       .answer {
         display: none;
-        margin-top: 10pxpx;
+        margin-top: 10px;
       }
 
       .hidden {
@@ -261,8 +265,19 @@
       }
 
       @media (max-width: 640px){
+        .Question{
+          margin-top: 0;
+        }
+
         .question-section{
           width: 80%;
+          margin-top: 0;
+        }
+        .listQuestion{
+        margin: 0px;
+        }
+        .listQuestion ul{
+          margin: 13px;
         }
       }
       /* Question */
@@ -324,7 +339,7 @@
               <textarea id="jawaban-pertanyaan" name="pertanyaan" readonly></textarea>
               <br>
               <label for="nama">Nama Anda</label><br>
-              <input id="nama" name="nama" placeholder="Nama Anda" required>
+              <input id="nama" type="text" name="nama" placeholder="Nama Anda" required>
               <label for="jawaban">Jawaban Anda:</label><br>
               <textarea id="jawaban" name="jawaban" placeholder="Jawaban Anda" required></textarea>
               <input type="hidden" id="id_question" name="id_question" value="" >

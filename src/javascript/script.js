@@ -177,7 +177,7 @@ try {
 
     const senderProfilePicture = document.createElement("img");
     senderProfilePicture.classList.add("sender-profile-picture");
-    senderProfilePicture.src = "./src/img/mario.jpg";
+    senderProfilePicture.src = "../src/img/mario.jpg";
     senderProfilePicture.width = 20; // Lebar dalam piksel
     senderProfilePicture.height = 20;
 
@@ -231,7 +231,7 @@ try {
           // Tambahkan foto profil penjawab
           const penjawabProfilePicture = document.createElement("img");
           penjawabProfilePicture.classList.add("penjawab-profile-picture");
-          penjawabProfilePicture.src = "./src/img/mario.jpg";
+          penjawabProfilePicture.src = "../src/img/mario.jpg";
           penjawabProfilePicture.width = 20; // Lebar dalam piksel
           penjawabProfilePicture.height = 20;
     
@@ -258,11 +258,11 @@ try {
 
     //
 
-    questionData.jawaban.forEach((jawaban) => {
-      const jawabanP = document.createElement("p");
-      jawabanP.textContent = jawaban;
-      answerDiv.appendChild(jawabanP);
-    });
+    // questionData.jawaban.forEach((jawaban) => {
+    //   const jawabanP = document.createElement("p");
+    //   jawabanP.textContent = jawaban;
+    //   answerDiv.appendChild(jawabanP);
+    // });
 
     questionDiv.addEventListener("click", () => {
       answerDiv.classList.toggle("hidden");
