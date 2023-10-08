@@ -55,6 +55,31 @@ try {
     questionDiv.classList.add("question");
     questionDiv.textContent = questionData.pertanyaan;
 
+    //
+
+    const senderInfoDiv = document.createElement("div");
+      senderInfoDiv.classList.add("sender-info");
+
+      // Tambahkan elemen untuk menampilkan foto profil pengirim dari folder lokal
+      const senderProfilePicture = document.createElement("img");
+      senderProfilePicture.classList.add("sender-profile-picture");
+      senderProfilePicture.src = "./img/Profil.png";
+      senderProfilePicture.width = 20; // Lebar dalam piksel
+      senderProfilePicture.height = 20;
+
+      // Tambahkan elemen untuk menampilkan nama pengirim
+      const senderName = document.createElement("span");
+      senderName.classList.add("sender-name");
+      senderName.textContent = questionData.name;
+      
+      senderInfoDiv.style.display = "flex";
+      senderInfoDiv.style.alignItems = "center"; // Gantilah dengan cara Anda mendapatkan nama pengirim
+
+      senderInfoDiv.appendChild(senderProfilePicture);
+      senderInfoDiv.appendChild(senderName);
+
+      //
+
     const answerNotificationDiv = document.createElement("div");
     answerNotificationDiv.classList.add("answer-notification");
     answerNotificationDiv.textContent = `${questionData.jawaban.length} Jawaban`;
@@ -70,8 +95,50 @@ try {
 
     questionBox.addEventListener("click", () => {
       answerDiv.classList.toggle("hidden");
-    });
 
+      //
+
+    if (!answerDiv.classList.contains("hidden")) {
+      // Hapus semua elemen penjawab sebelum menambahkan yang baru
+      while (answerDiv.firstChild) {
+        answerDiv.removeChild(answerDiv.firstChild);
+      }
+  
+      // Tampilkan informasi penjawab
+      questionData.jawaban.forEach((jawabanData) => {
+        const penjawabDiv = document.createElement("div");
+        penjawabDiv.classList.add("penjawab");
+  
+        // Tambahkan foto profil penjawab
+        const penjawabProfilePicture = document.createElement("img");
+        penjawabProfilePicture.classList.add("penjawab-profile-picture");
+        penjawabProfilePicture.src = "./img/user.png";
+        penjawabProfilePicture.width = 20; // Lebar dalam piksel
+        penjawabProfilePicture.height = 20;
+  
+        // Tambahkan nama penjawab
+        const penjawabName = document.createElement("span");
+        penjawabName.classList.add("penjawab-name");
+        penjawabName.textContent = jawabanData.nama;
+  
+        // Tambahkan isi jawaban
+        const jawabanP = document.createElement("p");
+        jawabanP.textContent = jawabanData.jawaban;
+
+        penjawabDiv.style.display = "flex";
+        penjawabDiv.style.alignItems = "center";
+  
+        penjawabDiv.appendChild(penjawabProfilePicture);
+        penjawabDiv.appendChild(penjawabName);
+  
+        answerDiv.appendChild(penjawabDiv);
+        answerDiv.appendChild(jawabanP);
+      });
+    }
+
+    //
+  });
+    questionBox.appendChild(senderInfoDiv);
     questionBox.appendChild(questionDiv);
     questionBox.appendChild(answerNotificationDiv);
     questionBox.appendChild(answerDiv);
@@ -104,6 +171,27 @@ try {
     questionDiv.classList.add("question");
     questionDiv.textContent = questionData.pertanyaan;
 
+    //
+    const senderInfoDiv = document.createElement("div");
+    senderInfoDiv.classList.add("sender-info");
+
+    const senderProfilePicture = document.createElement("img");
+    senderProfilePicture.classList.add("sender-profile-picture");
+    senderProfilePicture.src = "./img/user.png";
+    senderProfilePicture.width = 20; // Lebar dalam piksel
+    senderProfilePicture.height = 20;
+
+    const senderName = document.createElement("span");
+    senderName.classList.add("sender-name");
+    senderName.textContent = questionData.name;
+
+    senderInfoDiv.style.display = "flex";
+    senderInfoDiv.style.alignItems = "center";
+      
+    senderInfoDiv.appendChild(senderProfilePicture);
+    senderInfoDiv.appendChild(senderName);
+    //
+
     const answerNotificationDiv = document.createElement("div");
     answerNotificationDiv.classList.add("answer-notification");
     answerNotificationDiv.textContent = `${questionData.jawaban.length} Jawaban`;
@@ -125,6 +213,51 @@ try {
       formJawaban.style.display = "none"; // Menutup formulir saat tombol penutup ditekan
     });
 
+    //
+    questionBox.addEventListener("click", () => {
+      answerDiv.classList.toggle("hidden");
+    
+      if (!answerDiv.classList.contains("hidden")) {
+        // Hapus semua elemen penjawab sebelum menambahkan yang baru
+        while (answerDiv.firstChild) {
+          answerDiv.removeChild(answerDiv.firstChild);
+        }
+    
+        // Tampilkan informasi penjawab
+        questionData.jawaban.forEach((jawabanData) => {
+          const penjawabDiv = document.createElement("div");
+          penjawabDiv.classList.add("penjawab");
+    
+          // Tambahkan foto profil penjawab
+          const penjawabProfilePicture = document.createElement("img");
+          penjawabProfilePicture.classList.add("penjawab-profile-picture");
+          penjawabProfilePicture.src = "./img/user.png";
+          penjawabProfilePicture.width = 20; // Lebar dalam piksel
+          penjawabProfilePicture.height = 20;
+    
+          // Tambahkan nama penjawab
+          const penjawabName = document.createElement("span");
+          penjawabName.classList.add("penjawab-name");
+          penjawabName.textContent = jawabanData.nama;
+    
+          // Tambahkan isi jawaban
+          const jawabanP = document.createElement("p");
+          jawabanP.textContent = jawabanData.jawaban;
+
+          penjawabDiv.style.display = "flex";
+          penjawabDiv.style.alignItems = "center";
+    
+          penjawabDiv.appendChild(penjawabProfilePicture);
+          penjawabDiv.appendChild(penjawabName);
+    
+          answerDiv.appendChild(penjawabDiv);
+          answerDiv.appendChild(jawabanP);
+        });
+      }
+    });
+
+    //
+
     questionData.jawaban.forEach((jawaban) => {
       const jawabanP = document.createElement("p");
       jawabanP.textContent = jawaban;
@@ -135,6 +268,7 @@ try {
       answerDiv.classList.toggle("hidden");
     });
 
+    questionBox.appendChild(senderInfoDiv);
     questionBox.appendChild(questionDiv);
     questionBox.appendChild(answerNotificationDiv);
     questionBox.appendChild(answerDiv);
@@ -217,6 +351,7 @@ forma.addEventListener("submit", submitJawaban);
 async function submitJawaban(e) {
   e.preventDefault();
   // Mengambil nilai dari elemen HTML
+  const nameInput = document.getElementById("nama").value;
   const jawabanText = document.getElementById("jawaban").value;
   const idQuestionInput = document.getElementById("id_question");
 
@@ -234,6 +369,7 @@ async function submitJawaban(e) {
 
 // Data yang akan dikirimkan ke server
 const formJawab = {
+  nama: nameInput,
   id_question: idQuestionInt,
   jawaban: jawabanText,
 };
