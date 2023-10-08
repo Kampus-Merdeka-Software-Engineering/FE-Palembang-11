@@ -241,8 +241,8 @@ try {
           penjawabName.textContent = jawabanData.nama;
     
           // Tambahkan isi jawaban
-          const jawabanP = document.createElement("p");
-          jawabanP.textContent = jawabanData.jawaban;
+          // const jawabanP = document.createElement("p");
+          // jawabanP.textContent = jawabanData.jawaban;
 
           penjawabDiv.style.display = "flex";
           penjawabDiv.style.alignItems = "center";
@@ -251,7 +251,7 @@ try {
           penjawabDiv.appendChild(penjawabName);
     
           answerDiv.appendChild(penjawabDiv);
-          answerDiv.appendChild(jawabanP);
+          // answerDiv.appendChild(jawabanP);
         });
       }
     });
