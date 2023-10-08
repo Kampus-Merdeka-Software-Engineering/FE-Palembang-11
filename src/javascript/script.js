@@ -87,12 +87,6 @@ try {
     const answerDiv = document.createElement("div");
     answerDiv.classList.add("answer");
 
-    // questionData.jawaban.forEach((jawaban) => {
-    //   const jawabanP = document.createElement("p");
-    //   jawabanP.textContent = jawaban;
-    //   answerDiv.appendChild(jawabanP);
-    // });
-
     questionBox.addEventListener("click", () => {
       answerDiv.classList.toggle("hidden");
 
@@ -199,29 +193,7 @@ try {
     const answerDiv = document.createElement("div");
     answerDiv.classList.add("answer");
 
-    const addButton = document.createElement("button");
-    addButton.className = "jawaban-button";
-    addButton.textContent = "Berikan Jawaban";
-
-    addButton.addEventListener("click", () => {
-      jawabanPertanyaanTextarea.value = questionData.pertanyaan;
-      idQuestionTextarea.value = questionData.id_question;
-      formJawaban.style.display = "block";
-    });
-
-    closedButton.addEventListener("click", () => {
-      formJawaban.style.display = "none"; // Menutup formulir saat tombol penutup ditekan
-    });
-
     //
-    questionBox.addEventListener("click", () => {
-      answerDiv.classList.toggle("hidden");
-    
-      if (!answerDiv.classList.contains("hidden")) {
-        // Hapus semua elemen penjawab sebelum menambahkan yang baru
-        while (answerDiv.firstChild) {
-          answerDiv.removeChild(answerDiv.firstChild);
-        }
     
         // Tampilkan informasi penjawab
         questionData.jawaban.forEach((jawabanData) => {
@@ -253,20 +225,22 @@ try {
           answerDiv.appendChild(penjawabDiv);
           answerDiv.appendChild(jawabanP);
         });
-      }
-    });
 
     //
 
-    // questionData.jawaban.forEach((jawaban) => {
-    //   const jawabanP = document.createElement("p");
-    //   jawabanP.textContent = jawaban;
-    //   answerDiv.appendChild(jawabanP);
-    // });
+    const addButton = document.createElement("button");
+    addButton.className = "jawaban-button";
+    addButton.textContent = "Berikan Jawaban";
 
-    questionDiv.addEventListener("click", () => {
-      answerDiv.classList.toggle("hidden");
+    addButton.addEventListener("click", () => {
+      jawabanPertanyaanTextarea.value = questionData.pertanyaan;
+      idQuestionTextarea.value = questionData.id_question;
+      formJawaban.style.display = "block";
     });
+
+      closedButton.addEventListener("click", () => {
+        formJawaban.style.display = "none"; // Menutup formulir saat tombol penutup ditekan
+      });
 
     questionBox.appendChild(senderInfoDiv);
     questionBox.appendChild(questionDiv);
