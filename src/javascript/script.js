@@ -11,16 +11,6 @@ function showMoreTutorial() {
   window.location.href = "./page/tutorial.html";
 }
 
-function toggleAnswer(questionNumber) {
-    const answer = document.querySelector(`#answer${questionNumber}`);
-    
-    if (answer.style.display === 'none' || answer.style.display === '') {
-        answer.style.display = 'block';
-    } else {
-        answer.style.display = 'none';
-    }
-}
-
 //whats
 var acc = document.getElementsByClassName("accordion");
 var i;
