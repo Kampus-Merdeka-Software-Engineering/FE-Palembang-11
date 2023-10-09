@@ -678,7 +678,7 @@ a.active,a:hover{
 /* About */
 .aboutus{
   margin-top: 100px;
-  border-radius: 30% 0 0 0;
+  border-radius: 30% 30% 0 0;
   width: 100%;
   min-height: 80vh;
   background-color: #E5D283;
@@ -693,11 +693,11 @@ a.active,a:hover{
 
 .as-content{
   float: left;
-  width:55%;
+  width: 70%;
 }
 .image-section{
   float: right;
-  width:40%;
+  width: 30%;
 }
 .image-section img{
   width: 100%;
@@ -705,17 +705,17 @@ a.active,a:hover{
 }
 .as-content .heading{
  text-transform: uppercase; 
- font-size: 24px;
+ font-size: 20px;
 }
 .as-content .content h3{
   margin-top: 20px;
   color: #213555;
-  font-size: 20px;
+  font-size: 18px;
 }
 .as-content .content p{
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: #213555;
 }
@@ -724,10 +724,10 @@ a.active,a:hover{
 }
 .as-content .content .button a{
   background-color: #213555;
-  padding: 12px 40px;
+  padding: 12px 20px;
   text-decoration: none;
   color:#E5D283;
-  font-size: 25px;
+  font-size: 16px;
   letter-spacing: 1.5px;
   transition: 0.2;
   border-radius: 20px;
@@ -735,14 +735,14 @@ a.active,a:hover{
 .as-content .content .button a:hover{
   background-color: #213555;
   color: #E5D283;
-  padding: 15px 45px;
+  padding: 15px 25px;
 }
 .as-content .social{
-  margin:40px 40px;
+  margin: 40px 25px;
 }
 .as-content .content .social i{
   font-size: 50px;
-  padding:0px 10px;
+  padding: 0px 10px;
 }
 .as-content .content .social i:hover{
   color:#a52a52;
@@ -751,19 +751,19 @@ a.active,a:hover{
   float: right;
   display: block;
   position: fixed;
-  left: 87%;
+  left: 85%;
   top: 90%;
   background-color: #213555;
   color:#E5D283;
   padding: 12px 14px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1.5px;
   border-radius: 10px;
   border: 2px solid black;
 }
 .contact-us-button a:hover{
- padding: 14px 18px;
+ padding: 14px 16px;
 }
 @media screen and (max-width: 768px){
   .aboutus-container{
