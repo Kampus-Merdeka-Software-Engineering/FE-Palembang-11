@@ -89,13 +89,24 @@
             color: #213555;
           }
           
-          @media screen and (max-width: 650px) {
+          @media screen and (max-width: 1024px) {
             .column {
-              width: 100%;
-              display: block;
+                width: 50%; 
+                float: left; 
+                margin: 0; 
             }
-
-          }
+    
+            .headAside {
+                margin: 10px; 
+            }
+        }
+    
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
