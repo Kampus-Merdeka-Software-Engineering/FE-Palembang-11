@@ -50,8 +50,7 @@
         .logo{
          display: inline-block;
          vertical-align: top;
-         width: 110px;
-         height: 60px;
+         height: 50px;
          margin-left: 100px;
          margin-right: 200px;
         }
@@ -102,9 +101,8 @@
             .logo{
              display: inline-block;
              vertical-align: top;
-             width: 110px;
-             height: 60px;
-             margin-left: 20px;
+             height: 50px;
+             margin-left: 0;
             }
 
             .checkbtn{
@@ -119,7 +117,7 @@
              left: -100%;
              text-align: center;
              transition: all .5s;
-             margin-top: 65px;
+             margin-top: 66px;
             }
 
             nav ul li{
@@ -188,7 +186,7 @@
             color: #213555
         }
 
-        @media screen and (max-width: 870px) {
+        @media screen and (max-width: 768px) {
             .course-section{
                 display: inline-block;
             }
@@ -199,6 +197,50 @@
             }
         }
         /* course */
+
+        /* contact us button */
+        .contact-us-button a{
+            float: right;
+            display: block;
+            position: fixed;
+            left: 87%;
+            top: 90%;
+            background-color: #213555;
+            color:#E5D283;
+            padding: 12px 14px;
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        .contact-us-button a:hover{
+        padding: 14px 18px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-us-button a{
+                float: right;
+                display: block;
+                position: fixed;
+                left: 58%;
+                top: 90%;
+                background-color: #213555;
+                color:#E5D283;
+                padding: 12px 14px;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 1.5px;
+                border-radius: 10px;
+                border: 2px solid black;
+            }
+            .contact-us-button a:hover{
+                padding: 14px 14px;
+            }
+        }
+
+        /* contact us button */
     </style>
 </head>
 <body>
@@ -320,6 +362,12 @@
             </div>
         </div>
         <!--3rd section end here-->
+        <div class="contact-us-button">
+            <a href="https://wa.me/0895611113751">
+              <i class="fab fa-whatsapp"></i>
+              <span>Contact Us</span>
+            </a>
+          </div>
     </div>
 </body>
 
