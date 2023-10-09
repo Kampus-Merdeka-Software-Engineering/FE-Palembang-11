@@ -275,20 +275,24 @@
           margin-top: 100px;
         }
 
-        #html-section{
+        .section{
           display: flex;
+        }
+
+        #html-section{
+          display: inline-block;
         }
 
         #css-section{
-          display: flex;
+          display: inline-block;
         }
 
         #javascript-section{
-          display: flex;
+          display: inline-block;
         }
 
         #nodejs-section{
-          display: flex;
+          display: inline-block;
         }
 
         .tutor a{
@@ -323,6 +327,10 @@
 
           .Tutorial{
             width: 100%;
+          }
+
+          .section{
+            display: inline-block;
           }
 
           #html-section{
@@ -452,9 +460,11 @@
   <div class="tutorial">
     <div class="text">
       <!-- HTML Section -->
-      <h2>HTML Tutorial</h2>
-      <p>HTML is the standard markup language for making web pages.</p>
       <div id="html-section">
+        <h2>HTML Tutorial</h2>
+        <p>HTML is the standard markup language for making web pages.</p>
+      </div>
+      <div class="section">
         <div class="tutor">
           <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">
             <div class="tutor-box">
@@ -498,9 +508,11 @@
       </div>
       <!-- HTML Section -->
       <!-- CSS Section -->
-      <h2>CSS Tutorial</h2>
-      <p>CSS is used to style and lay out web pages.</p>
       <div id="css-section">
+        <h2>CSS Tutorial</h2>
+        <p>CSS is used to style and lay out web pages.</p>
+      </div>
+      <div class="section">
         <div class="tutor">
           <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">
             <div class="tutor-box">
@@ -544,9 +556,11 @@
       </div>
       <!-- CSS Section -->
       <!-- JavaScript Section -->
-      <h2>JavaScript Tutorial</h2>
-      <p>JavaScript is used to make dynamic and interactive web pages</p>
       <div id="javascript-section">
+        <h2>JavaScript Tutorial</h2>
+        <p>JavaScript is used to make dynamic and interactive web pages</p>
+      </div>
+      <div class="section">
         <div class="tutor">
           <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings">
             <div class="tutor-box">
@@ -590,9 +604,11 @@
       </div>
       <!-- JavaScript Section -->
       <!-- Node.js Section -->
-      <h2>Node.js Tutorial</h2>
-      <p>Node.js is used to build backend of websites and application using JavaScript</p>
       <div id="nodejs-section">
+        <h2>Node.js Tutorial</h2>
+        <p>Node.js is used to build backend of websites and application using JavaScript</p>
+      </div>
+      <div class="section">
         <div class="tutor">
           <a href="https://www.w3schools.com/nodejs/nodejs_http.asp">
             <div class="tutor-box">
